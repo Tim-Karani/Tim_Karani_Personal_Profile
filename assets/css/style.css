@@ -52,7 +52,6 @@ body{
     radial-gradient(circle at bottom left,
     rgba(20,184,166,.05),
     transparent 30%);
-
 }
 
 img{
@@ -653,7 +652,6 @@ body.dark-mode .page-hero{
 ========================================== */
 
 @media(max-width:992px){
-
     .page-hero h1{
         font-size:2.3rem;
     }
