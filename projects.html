@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>if(localStorage.getItem("theme")==="dark"){document.documentElement.classList.add("theme-pending-dark");}</script>
+
+    <title>Projects | Tim Karani</title>
+
+    <meta name="description"
+        content="A showcase of Tim Karani's projects — from a PHP career guidance system to graphic design and future IT automation work.">
+    <meta name="author" content="Tim Karani">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+
+    <link rel="icon" href="assets/images/favicon.png">
+    <noscript><style>#loader{display:none !important;}</style></noscript>
+</head>
+<body>
+
+<div id="loader"><h2>Tim Karani</h2></div>
+<div id="progress-bar"></div>
+
+<!-- HEADER -->
+<div id="site-header"></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <span class="eyebrow">My Work</span>
+    <h1>Featured <span>Projects</span></h1>
+    <p>A growing collection of projects that reflect my passion for building practical technology solutions.</p>
+</section>
+
+<section class="projects-page">
+
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-category="dev">
+            <div class="project-thumb"><i class="fas fa-route"></i></div>
+            <span class="status-badge status-live">Live</span>
+            <h3>Career Guidance System</h3>
+            <p>
+                A PHP and MySQL web application developed as my diploma capstone project. It matches users with
+                career paths based on their skills and interests, with form validation, backend logic, and a
+                structured frontend/backend architecture built for real-world usability.
+            </p>
+            <div class="tech-tags">
+                <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="card-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub — <em>[Add repo link]</em></a>
+            </div>
+        </article>
+
+        <article class="project-card" data-category="dev">
+            <div class="project-thumb"><img src="assets/images/hero-bg.jpg" alt="Personal Portfolio Website"></div>
+            <span class="status-badge status-live">Live</span>
+            <h3>Personal Portfolio Website</h3>
+            <p>
+                The site you're viewing now — a fully responsive, multi-page portfolio built from scratch with
+                HTML, CSS and JavaScript. Features dark/light mode, scroll animations, a typing effect hero,
+                and a component-based design system.
+            </p>
+            <div class="tech-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+            <div class="card-links">
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub — <em>[Add repo link]</em></a>
+            </div>
+        </article>
+
+        <article class="project-card" data-category="design">
+            <div class="project-thumb"><i class="fas fa-palette"></i></div>
+            <span class="status-badge status-progress">In Progress</span>
+            <h3>Graphic Design Gallery</h3>
+            <p>
+                A growing collection of creative work as I continue developing my graphic design skills in
+                Photoshop — from social media graphics to branding concepts and visual communication pieces.
+            </p>
+            <div class="tech-tags">
+                <span>Photoshop</span><span>Visual Design</span>
+            </div>
+            <div class="card-links">
+                <a href="services.html">See Design Services →</a>
+            </div>
+        </article>
+
+        <article class="project-card" data-category="upcoming">
+            <div class="project-thumb"><i class="fas fa-robot"></i></div>
+            <span class="status-badge status-planned">Planned</span>
+            <h3>Future IT Automation Projects</h3>
+            <p>
+                Building scripts and small tools to automate repetitive IT support tasks — ticket logging,
+                reporting, and routine system checks — inspired by real needs I've observed on the job.
+            </p>
+            <div class="tech-tags">
+                <span>PHP</span><span>Automation</span>
+            </div>
+            <div class="card-links">
+                <span style="color:var(--text-light);font-size:.9rem;">Coming soon</span>
+            </div>
+        </article>
+
+        <article class="project-card" data-category="upcoming">
+            <div class="project-thumb"><i class="fas fa-network-wired"></i></div>
+            <span class="status-badge status-planned">Planned</span>
+            <h3>Networking &amp; Systems Projects</h3>
+            <p>
+                Hands-on networking and systems projects building on my server room and infrastructure exposure —
+                home lab setups, basic network configuration, and systems documentation.
+            </p>
+            <div class="tech-tags">
+                <span>Networking</span><span>Systems</span>
+            </div>
+            <div class="card-links">
+                <span style="color:var(--text-light);font-size:.9rem;">Coming soon</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Have a Project in Mind?</h2>
+    <p>I'm always open to collaborating on practical, meaningful technology work.</p>
+    <a href="contact.html" class="btn primary-btn" style="background:white;color:var(--primary);">Get In Touch</a>
+</section>
+
+<!-- FOOTER -->
+<div id="site-footer"></div>
+
+<script src="assets/js/partials.js" defer></script>
+<script src="assets/js/script.js" defer></script>
+<button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+</body>
+</html>

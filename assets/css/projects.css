@@ -1,0 +1,105 @@
+/* ==========================================
+   PROJECTS PAGE ONLY
+   Auto-split from the original monolithic style.css
+========================================== */
+
+/* ==========================================
+   PROJECTS PAGE
+========================================== */
+
+.project-filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:50px;
+}
+
+.filter-btn{
+    border:2px solid rgba(37,99,235,.2);
+    background:transparent;
+    color:var(--text);
+    padding:10px 24px;
+    border-radius:50px;
+    font-weight:600;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:var(--primary);
+    border-color:var(--primary);
+    color:white;
+}
+
+body.dark-mode .filter-btn{
+    color:var(--white);
+}
+
+.project-card .project-thumb{
+    width:100%;
+    height:190px;
+    border-radius:14px;
+    margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    font-size:2.6rem;
+    overflow:hidden;
+}
+
+.project-card .project-thumb img{
+    height:100%;
+    object-fit:cover;
+}
+
+.project-card .status-badge{
+    display:inline-block;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    padding:5px 14px;
+    border-radius:50px;
+    margin-bottom:14px;
+}
+
+.status-live{
+    background:#ECFDF5;
+    color:#065F46;
+}
+
+.status-progress{
+    background:#FEF3C7;
+    color:#92400E;
+}
+
+.status-planned{
+    background:#EFF6FF;
+    color:#1E40AF;
+}
+
+.project-card .tech-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:20px;
+}
+
+.project-card .tech-tags span{
+    background:rgba(37,99,235,.08);
+    color:var(--primary);
+    font-size:.78rem;
+    font-weight:600;
+    padding:5px 12px;
+    border-radius:50px;
+}
+
+.project-card .card-links{
+    display:flex;
+    gap:20px;
+}
+

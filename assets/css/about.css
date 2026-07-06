@@ -1,0 +1,143 @@
+/* ==========================================
+   ABOUT PAGE ONLY
+   Auto-split from the original monolithic style.css
+========================================== */
+
+/* ==========================================
+   ABOUT PAGE
+========================================== */
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.story-grid .story-image{
+    position:relative;
+}
+
+.story-grid .story-image img{
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.story-grid h2{
+    text-align:left;
+}
+
+.values-grid,
+.goals-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
+}
+
+.value-card{
+    background:var(--white);
+    padding:32px 28px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border-top:4px solid var(--primary);
+}
+
+.value-card i{
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:16px;
+}
+
+.value-card h3{
+    margin-bottom:10px;
+}
+
+body.dark-mode .value-card{
+    background:#1E293B;
+}
+
+.skills-section{
+    background:var(--white);
+}
+
+.skills-columns{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+}
+
+.skill-group h3{
+    margin-bottom:20px;
+    color:var(--primary);
+    font-size:1.1rem;
+}
+
+.skill-bar-item{
+    margin-bottom:18px;
+}
+
+.skill-bar-item .skill-label{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-weight:600;
+    color:var(--text);
+    font-size:.95rem;
+}
+
+body.dark-mode .skill-bar-item .skill-label{
+    color:var(--white);
+}
+
+.skill-bar-track{
+    width:100%;
+    height:8px;
+    border-radius:50px;
+    background:rgba(37,99,235,.12);
+    overflow:hidden;
+}
+
+.skill-bar-fill{
+    height:100%;
+    border-radius:50px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    width:0;
+    transition:width 1.2s ease;
+}
+
+.tag-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    background:rgba(37,99,235,.08);
+    color:var(--primary);
+    padding:8px 16px;
+    border-radius:50px;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+body.dark-mode .tag{
+    background:rgba(37,99,235,.18);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .story-grid{
+        grid-template-columns:1fr;
+    }
+
+    .story-grid .story-image{
+        order:-1;
+        max-width:420px;
+        margin:auto;
+    }
+}

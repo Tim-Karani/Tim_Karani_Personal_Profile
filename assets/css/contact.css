@@ -1,0 +1,174 @@
+/* ==========================================
+   CONTACT PAGE ONLY
+   Auto-split from the original monolithic style.css
+========================================== */
+
+/* ==========================================
+   CONTACT PAGE
+========================================== */
+
+.contact-layout{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:50px;
+    align-items:start;
+}
+
+.contact-info-card{
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:40px 32px;
+}
+
+body.dark-mode .contact-info-card{
+    background:#1E293B;
+}
+
+.contact-item{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+    margin-bottom:28px;
+}
+
+.contact-item i{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:14px;
+    background:rgba(37,99,235,.1);
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.15rem;
+}
+
+.contact-item h4{
+    margin-bottom:4px;
+    font-size:1rem;
+}
+
+.contact-item p{
+    margin-bottom:0;
+    font-size:.92rem;
+}
+
+.contact-form-card{
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:44px;
+}
+
+body.dark-mode .contact-form-card{
+    background:#1E293B;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:600;
+    margin-bottom:8px;
+    font-size:.92rem;
+    color:var(--text);
+}
+
+body.dark-mode .form-group label{
+    color:var(--white);
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:14px 16px;
+    border-radius:12px;
+    border:2px solid rgba(37,99,235,.15);
+    font-family:'Inter',sans-serif;
+    font-size:.95rem;
+    background:var(--light);
+    color:var(--text);
+    transition:var(--transition);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea{
+    background:#0F172A;
+    color:white;
+    border-color:rgba(255,255,255,.1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.1);
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:140px;
+}
+
+.form-error{
+    color:#DC2626;
+    font-size:.82rem;
+    margin-top:6px;
+    display:none;
+}
+
+.form-group.invalid input,
+.form-group.invalid textarea{
+    border-color:#DC2626;
+}
+
+.form-group.invalid .form-error{
+    display:block;
+}
+
+.form-submit-btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.form-success{
+    display:none;
+    background:#ECFDF5;
+    color:#065F46;
+    padding:16px 20px;
+    border-radius:12px;
+    margin-bottom:22px;
+    font-weight:600;
+}
+
+.form-success.show{
+    display:block;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .contact-layout{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+}

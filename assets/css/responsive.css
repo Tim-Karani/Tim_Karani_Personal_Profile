@@ -1,0 +1,330 @@
+/* ==========================================
+   LARGE DEVICES
+========================================== */
+
+@media (max-width:1200px){
+
+    h1{
+        font-size:3.5rem;
+    }
+
+    .hero{
+        gap:50px;
+    }
+
+    .hero-image img{
+        width:360px;
+        height:360px;
+    }
+
+    .hero-image::before{
+        width:420px;
+        height:420px;
+    }
+
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width:992px){
+
+    section{
+        padding:80px 6%;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:60px;
+
+    }
+
+    .hero-description{
+
+        margin:auto;
+
+    }
+
+    .mission{
+
+        margin:auto;
+        margin-top:30px;
+        margin-bottom:40px;
+        max-width:650px;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+@media(max-width:900px){
+
+.nav-links{
+
+    position:fixed;
+
+    top:85px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:calc(100vh - 85px);
+
+    background:white;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    padding-top:50px;
+
+    gap:35px;
+
+    transition:.4s ease;
+
+    box-shadow:-10px 0 25px rgba(0,0,0,.08);
+
+}
+
+.nav-links.active{
+
+    right:0;
+
+}
+
+.hamburger{
+
+    display:flex;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:6px;
+
+}
+
+.hamburger span{
+
+    width:28px;
+
+    height:3px;
+
+    background:var(--dark);
+
+    border-radius:50px;
+
+}
+
+body.dark-mode .nav-links{
+
+    background:#0F172A;
+
+    box-shadow:-10px 0 25px rgba(0,0,0,.5);
+
+}
+
+}
+
+/* ==========================================
+   PHONES
+========================================== */
+
+@media(max-width:768px){
+
+h1{
+
+    font-size:2.8rem;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+}
+
+.hero{
+
+    padding-top:130px;
+
+}
+
+.hero-image img{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.hero-image::before{
+
+    width:340px;
+
+    height:340px;
+
+}
+
+.hero-image::after{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+.projects-grid,
+.services-grid,
+.tech-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.btn{
+
+    display:block;
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+}
+
+.cta{
+
+    margin:30px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE TIMELINE
+========================================== */
+
+@media(max-width:768px){
+
+.timeline-container::before{
+
+    left:20px;
+
+}
+
+.timeline-item{
+
+    width:100%;
+
+    left:0 !important;
+
+    margin-left:45px;
+
+}
+
+.timeline-item::before{
+
+    left:-35px !important;
+
+}
+
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media(max-width:500px){
+
+section{
+
+    padding:70px 5%;
+
+}
+
+.navbar{
+
+    padding:18px 5%;
+
+}
+
+.logo h2{
+
+    font-size:1.3rem;
+
+}
+
+.hero-image img{
+
+    width:230px;
+
+    height:230px;
+
+}
+
+.hero-image::before{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.hero h2{
+
+    font-size:1.4rem;
+
+}
+
+.hero-description{
+
+    font-size:1rem;
+
+}
+
+.footer-content{
+
+    text-align:center;
+
+}
+
+.social-links a{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+}
+

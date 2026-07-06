@@ -1,0 +1,117 @@
+/* ==========================================
+   RESUME PAGE ONLY
+   Auto-split from the original monolithic style.css
+========================================== */
+
+/* ==========================================
+   RESUME PAGE
+========================================== */
+
+.resume-actions{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.resume-layout{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:50px;
+    align-items:start;
+}
+
+.resume-card{
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:36px;
+}
+
+body.dark-mode .resume-card{
+    background:#1E293B;
+}
+
+.resume-card h3{
+    color:var(--primary);
+    margin-bottom:20px;
+    padding-bottom:12px;
+    border-bottom:2px solid rgba(37,99,235,.12);
+}
+
+.resume-entry{
+    margin-bottom:28px;
+    padding-left:22px;
+    border-left:3px solid var(--primary);
+    position:relative;
+}
+
+.resume-entry:last-child{
+    margin-bottom:0;
+}
+
+.resume-entry::before{
+    content:"";
+    position:absolute;
+    left:-8px;
+    top:4px;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:var(--secondary);
+}
+
+.resume-entry .role{
+    font-weight:700;
+    color:var(--dark);
+    font-size:1.05rem;
+    margin-bottom:2px;
+}
+
+body.dark-mode .resume-entry .role{
+    color:var(--white);
+}
+
+.resume-entry .meta{
+    font-size:.88rem;
+    color:var(--text-light);
+    font-style:italic;
+    margin-bottom:10px;
+}
+
+.resume-entry ul{
+    margin-left:2px;
+}
+
+.resume-entry ul li{
+    color:var(--text-light);
+    font-size:.95rem;
+    margin-bottom:6px;
+    padding-left:18px;
+    position:relative;
+}
+
+.resume-entry ul li::before{
+    content:"▹";
+    position:absolute;
+    left:0;
+    color:var(--primary);
+}
+
+.resume-side-block{
+    margin-bottom:36px;
+}
+
+.resume-side-block:last-child{
+    margin-bottom:0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .resume-layout{
+        grid-template-columns:1fr;
+    }
+}

@@ -1,0 +1,287 @@
+/* ==========================================
+   HOME PAGE ONLY
+   Auto-split from the original monolithic style.css
+========================================== */
+
+/* ==========================================
+   HERO
+========================================== */
+
+.availability-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 18px;
+    border-radius:50px;
+    background:#ECFDF5;
+    color:#065F46;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+.availability-badge span{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#10B981;
+}
+
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+    padding-top:150px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.greeting{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.hero h2{
+    color:var(--secondary);
+    margin:20px 0;
+}
+
+.hero-description{
+    font-size:1.1rem;
+    max-width:600px;
+}
+
+.mission{
+    border-left:5px solid var(--primary);
+    padding-left:20px;
+    margin:40px 0;
+    font-style:italic;
+}
+
+/* PHOTO */
+
+.hero-image{
+    position:relative;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:420px;
+    height:420px;
+    object-fit:cover;
+    border-radius:50%;
+    position:relative;
+    z-index:2;
+    border:10px solid white;
+    box-shadow:var(--shadow);
+    transition:.4s ease;
+}
+
+.hero-image img:hover{
+    transform:scale(1.03);
+    box-shadow:
+        0 20px 50px rgba(37,99,235,.25);
+}
+
+/* Decorative Circle */
+
+.hero-image::before{
+    content:"";
+    position:absolute;
+    width:480px;
+    height:480px;
+    border-radius:50%;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+    opacity:.15;
+}
+
+/* Floating Card */
+
+.hero-image::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:40px;
+    background:rgba(255,255,255,.35);
+    backdrop-filter:blur(20px);
+    transform:rotate(15deg);
+    z-index:1;
+}
+
+/* ==========================================
+   HERO DECORATIONS
+========================================== */
+
+.hero-glow{
+    position:absolute;
+    width:520px;
+    height:520px;
+    background:radial-gradient(
+    rgba(37,99,235,.25),
+    transparent 70%);
+    border-radius:50%;
+    z-index:0;
+}
+
+.floating-circle{
+    position:absolute;
+    border-radius:50%;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+    opacity:.15;
+}
+
+.circle-1{
+    width:60px;
+    height:60px;
+    top:20px;
+    left:20px;
+}
+
+.circle-2{
+    width:30px;
+    height:30px;
+    bottom:40px;
+    right:40px;
+}
+
+.floating-square{
+    position:absolute;
+    border:2px solid rgba(20,184,166,.25);
+    transform:rotate(25deg);
+}
+
+.square-1{
+    width:40px;
+    height:40px;
+    top:80px;
+    right:30px;
+}
+
+.square-2{
+    width:22px;
+    height:22px;
+    bottom:80px;
+    left:60px;
+}
+
+/* ==========================================
+   ABOUT PREVIEW
+========================================== */
+
+.about-preview{
+    background:var(--white);
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content p{
+    font-size:1.1rem;
+    margin-bottom:35px;
+}
+
+/* ==========================================
+   TECH STACK
+========================================== */
+
+.tech-stack{
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #f7fbff
+    );
+}
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:25px;
+}
+
+.tech-card{
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:transform .35s ease,
+               box-shadow .35s ease,
+               border-color .35s ease;
+    border:1px solid transparent;
+}
+
+.tech-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 45px rgba(37,99,235,.15);
+    border-color:rgba(37,99,235,.15);
+}
+
+.tech-card i{
+    font-size:3rem;
+    color:var(--primary);
+    margin-bottom:20px;
+    transition:transform .35s ease,
+               color .35s ease;
+}
+
+.tech-card:hover i{
+    color:var(--secondary);
+    transform:rotate(10deg) scale(1.1);
+}
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    background:var(--white);
+    padding:35px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    border-top:5px solid transparent;
+    transition:transform .35s ease,
+               box-shadow .35s ease,
+               border-color .35s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    border-top-color:var(--primary);
+    box-shadow:0 25px 45px rgba(37,99,235,.15);
+}
+
+.project-card h3{
+    margin-bottom:20px;
+}
+
+.project-card a{
+    color:var(--primary);
+    font-weight:600;
+    transition:color .3s ease;
+}
+
+.project-card a:hover{
+    color:var(--secondary);
+}
+
