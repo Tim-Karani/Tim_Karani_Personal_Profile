@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Faulu Career Guidance System — Case study · Tim Karani</title>
+  <meta name="description" content="Case study: a PHP and MySQL web application that recommends career paths from the skills a student chooses. An independent build by Tim Karani, 2025.">
+  <meta name="theme-color" content="#0B1020">
+  <link rel="canonical" href="https://tim-karani.netlify.app/projects/faulu-career-guidance.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Faulu Career Guidance System — Tim Karani">
+  <meta property="og:description" content="From interests in to direction out: a PHP and MySQL career-guidance web app.">
+  <meta property="og:image" content="https://tim-karani.netlify.app/assets/img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>
+    (function () { var d = document.documentElement; d.classList.add('js');
+      var p = null; try { p = localStorage.getItem('tk-motion'); } catch (e) {}
+      if (p === 'off' || (p !== 'on' && matchMedia('(prefers-reduced-motion: reduce)').matches)) d.classList.add('reduce-motion');
+      if (p === 'on') d.classList.add('motion-forced');
+      setTimeout(function () { if (!window.__tkReady) d.classList.remove('js'); }, 3500); })();
+  </script>
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+
+  <header class="site-nav site-nav--sub" id="top-nav">
+    <a class="brand" href="/" aria-label="Tim Karani — home">
+      <span class="brand__mark" aria-hidden="true">TK</span><span class="brand__name">Tim Karani</span>
+    </a>
+    <div class="nav-tools">
+      <a class="motion-toggle" style="display:inline-flex;align-items:center;text-decoration:none" href="/#work">← All work</a>
+      <button class="motion-toggle" type="button" aria-pressed="true" data-motion-toggle>Motion: on</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="cover cover--faulu" aria-hidden="true">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <g stroke="#2DD4BF" fill="none"><circle cx="900" cy="250" r="90" opacity=".6"/><circle cx="900" cy="250" r="170" opacity=".25"/><circle cx="900" cy="250" r="270" opacity=".1"/>
+          <path d="M80 700 C380 700 520 450 810 290" opacity=".6"/><path d="M80 620 C340 620 480 380 815 270" opacity=".3"/><path d="M80 540 C300 540 460 320 820 255" opacity=".15"/></g>
+          <g fill="#2DD4BF"><circle cx="80" cy="700" r="6"/><circle cx="80" cy="620" r="5" opacity=".6"/><circle cx="80" cy="540" r="4" opacity=".4"/><circle cx="900" cy="250" r="10"/></g>
+        </svg>
+      </div>
+      <div class="wrap">
+        <a class="back label link-line" href="/#work">← Back to the archive</a>
+        <p class="label label--teal" style="margin-top:28px">Case 01 · Web application · <span class="status status--completed">Completed</span></p>
+        <h1>Faulu Career Guidance System</h1>
+        <p class="lede">A PHP and MySQL web application that helps students find careers that fit the skills they already have. Designed, built and deployed end to end as an independent product — including an admin panel to manage the careers and users behind it.</p>
+        <dl class="factsheet">
+          <div><dt class="label">Role</dt><dd>Product design &amp; full-stack development</dd></div>
+          <div><dt class="label">Type</dt><dd>Independent product · 2025</dd></div>
+          <div><dt class="label">Stack</dt><dd>PHP · MySQL · HTML · CSS · JavaScript</dd></div>
+          <div><dt class="label">Status</dt><dd>Completed</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="wrap case-body">
+      <section class="case-sec case-sec--split" aria-labelledby="c-problem">
+        <h2 id="c-problem" data-reveal>The problem</h2>
+        <div class="prose" data-reveal>
+          <p>Many students choose a course or career with very little structured guidance. Information is scattered, generic, and rarely starts from what the student is actually good at.</p>
+          <p>Faulu asks a student which skills they have, matches them against a database of careers and their required skills, and shows which careers fit and why.</p>
+        </div>
+      </section>
+
+      <section class="case-sec" aria-labelledby="c-shots">
+        <h2 id="c-shots" data-reveal>The real app</h2>
+        <div class="shots shots--real" data-reveal>
+          <figure class="shot-phone">
+            <div class="shot-phone__frame" tabindex="0" aria-label="Faulu home page on a phone — scrollable screenshot">
+              <img src="/assets/projects/faulu/home-mobile.webp" alt="Faulu Career Guidance home page on a phone: green hero 'Unlock Your Future Career Potential' with Get Started and Learn More buttons, four feature cards, a call to action and the footer" width="600" height="2012" loading="lazy" decoding="async">
+            </div>
+            <figcaption><span class="flag flag--real">Screenshot</span> Home page on a phone — scroll inside the frame</figcaption>
+          </figure>
+          <figure class="shot-desk">
+            <div class="browser" style="--tilt-x:0deg;--tilt-y:0deg">
+              <div class="browser__bar" aria-hidden="true"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url">faulu / login.php</span></div>
+              <img src="/assets/projects/faulu/login.webp" alt="Faulu sign-in page: 'Welcome Back' card with email or username, password with show/hide toggle, remember me, forgot password and a link to create an account" width="1065" height="900" loading="lazy" decoding="async">
+            </div>
+            <figcaption><span class="flag flag--real">Screenshot</span> Sign-in, with show/hide password and remember-me</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-sec" aria-labelledby="c-journey">
+        <h2 id="c-journey" data-reveal>The user journey</h2>
+        <ol class="journey-map" data-reveal>
+          <li><span class="label label--teal">01</span><b>Register &amp; sign in</b><p>A private account, protected by hashed passwords and CSRF tokens.</p></li>
+          <li><span class="label label--teal">02</span><b>Choose 3–5 skills</b><p>The options come straight from the skills listed in the career database.</p></li>
+          <li><span class="label label--teal">03</span><b>Matching</b><p>MySQL returns careers whose required skills include the ones chosen.</p></li>
+          <li><span class="label label--teal">04</span><b>Results</b><p>Matched skills are highlighted on each career, and the results are saved.</p></li>
+          <li><span class="label label--teal">05</span><b>Dashboard</b><p>Past results, saved careers and personal goals in one place.</p></li>
+        </ol>
+        <p class="scene__note" data-reveal><span class="flag flag--real">Try it</span> A working, simplified model of the matching step runs on the home page. <a class="link-line" href="/#scene-data">Open the request-flow demo →</a></p>
+      </section>
+
+      <section class="case-sec" aria-labelledby="c-walk">
+        <h2 id="c-walk" data-reveal>The screens behind the login</h2>
+        <p class="chapter__lede" data-reveal style="font-size:var(--step-0)">These screens sit behind sign-in, so they're recreated here from the app's source code, in its own look. Use the tabs, or the arrow keys once a tab is focused.</p>
+        <div class="walk walk--faulu" data-scene="walk">
+          <div class="tabs walk__tabs" role="tablist" aria-label="App screens">
+            <button class="tab" role="tab" id="w-tab-1" aria-controls="w-1" aria-selected="true">01 · Skills</button>
+            <button class="tab" role="tab" id="w-tab-2" aria-controls="w-2" aria-selected="false" tabindex="-1">02 · Results</button>
+            <button class="tab" role="tab" id="w-tab-3" aria-controls="w-3" aria-selected="false" tabindex="-1">03 · Dashboard</button>
+            <button class="tab" role="tab" id="w-tab-4" aria-controls="w-4" aria-selected="false" tabindex="-1">04 · Admin</button>
+          </div>
+          <div class="browser walk__browser" style="--tilt-x:0deg;--tilt-y:0deg">
+            <div class="browser__bar" aria-hidden="true"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url" data-walk-url>faulu / questionnaire.php</span></div>
+            <div class="walk__view">
+              <div class="walk__screen" role="tabpanel" id="w-1" aria-labelledby="w-tab-1" data-url="faulu / questionnaire.php">
+                <div class="ws-wide">
+                  <span class="ws-kicker">Skills assessment</span>
+                  <b class="ws-title">Select the skills you have</b>
+                  <span class="ws-sub">Choose between 3 and 5. You've selected 3.</span>
+                  <div class="ws-opts">
+                    <span class="on">Problem solving</span><span>Drawing</span><span class="on">Communication</span>
+                    <span>Accounting</span><span class="on">Programming</span><span>Teaching</span><span>Networking</span><span>Writing</span>
+                  </div>
+                  <span class="ws-btn" style="justify-self:start">Find my careers</span>
+                </div>
+              </div>
+              <div class="walk__screen" role="tabpanel" id="w-2" aria-labelledby="w-tab-2" data-url="faulu / results.php" hidden>
+                <div class="ws-wide">
+                  <span class="ws-kicker">Your results</span>
+                  <b class="ws-title">Careers that match your profile</b>
+                  <span class="ws-res"><b>Software Developer</b><small>Technology · Degree or diploma</small><span class="ws-tags"><i class="m">Programming ✓</i><i class="m">Problem solving ✓</i><i>Teamwork</i></span><em>Save</em></span>
+                  <span class="ws-res"><b>IT Support Specialist</b><small>Technology · Diploma</small><span class="ws-tags"><i class="m">Communication ✓</i><i class="m">Problem solving ✓</i><i>Networking</i></span><em>Save</em></span>
+                  <span class="ws-res"><b>Technical Writer</b><small>Media · Degree</small><span class="ws-tags"><i class="m">Communication ✓</i><i>Writing</i></span><em>Save</em></span>
+                </div>
+              </div>
+              <div class="walk__screen" role="tabpanel" id="w-3" aria-labelledby="w-tab-3" data-url="faulu / dashboard.php" hidden>
+                <div class="ws-wide" style="max-width:720px">
+                  <b class="ws-title">Welcome back, Student</b>
+                  <div class="ws-stats">
+                    <span><b>2</b><small>Assessments taken</small></span><span><b>3</b><small>Saved careers</small></span><span><b>1</b><small>Active goal</small></span>
+                  </div>
+                  <span class="ws-sub">Recent results</span>
+                  <span class="ws-res"><b>Software Developer</b><small>Matched in your latest assessment</small><em>View</em></span>
+                  <span class="ws-res"><b>Goal: finish an online networking course</b><small>Target date set · active</small><em>Edit</em></span>
+                </div>
+              </div>
+              <div class="walk__screen" role="tabpanel" id="w-4" aria-labelledby="w-tab-4" data-url="faulu / admin/manage_careers.php" hidden>
+                <div class="ws-dash">
+                  <span class="ws-side" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span>
+                  <div class="ws-wide" style="padding:0;border:0;background:none;box-shadow:none;max-width:none">
+                    <span class="ws-kicker">Admin panel</span>
+                    <b class="ws-title">Manage careers</b>
+                    <div class="ws-table" role="presentation">
+                      <span class="h">Title</span><span class="h">Industry</span><span class="h">Actions</span>
+                      <span>Software Developer</span><span>Technology</span><span class="a">Edit · Delete</span>
+                      <span>Graphic Designer</span><span>Creative</span><span class="a">Edit · Delete</span>
+                      <span>Accountant</span><span>Finance</span><span class="a">Edit · Delete</span>
+                    </div>
+                    <span class="ws-btn" style="justify-self:start">+ Add career</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="scene__note"><span class="flag">Illustrative recreation</span> Rebuilt from the source code, with sample names and numbers. Not screenshots.</p>
+        </div>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="c-build">
+        <h2 id="c-build" data-reveal>How it's built</h2>
+        <div class="arch" data-reveal>
+          <div class="arch__layer"><span class="label label--teal">Interface</span><p>PHP-rendered pages with their own CSS, a responsive layout and small JavaScript touches such as show/hide password and remember-me.</p></div>
+          <div class="arch__join">↓ request &nbsp;·&nbsp; response ↑</div>
+          <div class="arch__layer"><span class="label label--teal">Application</span><p>PHP sessions with a timeout and ID regeneration, a CSRF token on every form, bcrypt password hashing, server-side validation including password strength, and failed-login counting.</p></div>
+          <div class="arch__join">↓ query &nbsp;·&nbsp; rows ↑</div>
+          <div class="arch__layer"><span class="label label--teal">Data</span><p>MySQL tables for users, careers, results, saved careers, goals and admins.</p></div>
+        </div>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="c-code">
+        <h2 id="c-code" data-reveal>From the source</h2>
+        <div class="sql" data-reveal>
+          <div class="sql__head"><span class="label label--teal">login.php · excerpt</span><span class="label">PHP</span></div>
+<pre><span class="c">// Look the user up by email OR username, with a prepared statement</span>
+$stmt = $conn-&gt;prepare(<span class="s">"SELECT id, username, password, email
+                         FROM users WHERE email = ? OR username = ?"</span>);
+$stmt-&gt;bind_param(<span class="s">"ss"</span>, $email, $email);
+$stmt-&gt;execute();
+<span class="c">// ...</span>
+<span class="k">if</span> (verifyPassword($password, $user[<span class="s">'password'</span>])) {
+    $_SESSION[<span class="s">'user_id'</span>] = $user[<span class="s">'id'</span>];
+    session_regenerate_id(<span class="k">true</span>);
+    redirect(<span class="s">'dashboard.php'</span>);
+}</pre>
+        </div>
+      </section>
+
+      <section class="case-sec" aria-labelledby="c-features">
+        <h2 id="c-features" data-reveal>Key features</h2>
+        <ul class="feature-list" data-reveal>
+          <li><h3>Secure accounts</h3><p>Registration, login by email or username, hashed passwords, CSRF protection, and password reset by emailed link.</p></li>
+          <li><h3>Skills assessment</h3><p>Students pick 3–5 skills, drawn live from the careers in the database.</p></li>
+          <li><h3>Career matching</h3><p>Matching careers are listed with the student's own skills highlighted on each one.</p></li>
+          <li><h3>Search &amp; career details</h3><p>Browse every career, with industry, education level and required skills.</p></li>
+          <li><h3>Saved careers &amp; history</h3><p>Students save careers and can come back to past results.</p></li>
+          <li><h3>Goals tracker</h3><p>Students set, edit and complete personal career goals with target dates.</p></li>
+          <li><h3>Profile &amp; password</h3><p>Students update their details and change their password.</p></li>
+          <li><h3>Admin panel</h3><p>Add, edit and delete careers, manage users, and see usage analytics.</p></li>
+        </ul>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="c-learned">
+        <h2 id="c-learned" data-reveal>Key decisions</h2>
+        <div class="prose" data-reveal>
+          <p><strong>Never trust the browser alone.</strong> Every form is checked again on the server, and every form carries a CSRF token.</p>
+          <p><strong>Structure pays off.</strong> Separate config, helpers, page templates and an admin area made the app much easier to grow.</p>
+          <p><strong>Design for the real user.</strong> A student on a phone needs short steps and clear results more than clever features.</p>
+        </div>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="c-next">
+        <h2 id="c-next" data-reveal>What I'd improve next</h2>
+        <div class="prose" data-reveal>
+          <p><strong>Smarter ranking.</strong> Results are currently ordered by record, not by how many skills match. Next version: count the matches and rank by them.</p>
+          <p><strong>Prepared statements everywhere.</strong> Login already uses them; the matching query escapes input instead, and I'd move it to bound parameters too.</p>
+          <p><strong>Cleaner configuration.</strong> Keep database credentials out of the code, define every environment setting for local development, and set the secure-cookie flag from whether the site is on HTTPS.</p>
+        </div>
+      </section>
+
+      <nav class="next-case" aria-label="Next case study">
+        <span class="label">Next case</span>
+        <a href="/projects/field-operations-system.html">Field Operations &amp; Retail Execution →</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="label">© <span data-year>2026</span> Tim Karani · Technology with purpose</p>
+      <a class="label link-line" href="/#contact">Get in touch →</a>
+    </div>
+  </footer>
+</body>
+</html>

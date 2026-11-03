@@ -1,485 +1,794 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- ==========================================
-         BASIC META
-    =========================================== -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>if(localStorage.getItem("theme")==="dark"){document.documentElement.classList.add("theme-pending-dark");}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tim Karani — IT Professional &amp; Web Developer, Nairobi</title>
+  <meta name="description" content="Tim Karani is an IT professional in Nairobi building practical web applications and supporting the technology people rely on every day. Technology with purpose.">
+  <meta name="author" content="Tim Karani">
+  <meta name="theme-color" content="#0B1020">
+  <link rel="canonical" href="https://tim-karani.netlify.app/">
 
-    <title>Tim Karani | IT Professional</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tim Karani">
+  <meta property="og:title" content="Tim Karani — Technology with purpose">
+  <meta property="og:description" content="IT professional and web developer in Nairobi. Explore the work, the projects and the way I solve problems.">
+  <meta property="og:url" content="https://tim-karani.netlify.app/">
+  <meta property="og:image" content="https://tim-karani.netlify.app/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tim Karani — Technology with purpose">
+  <meta name="twitter:description" content="IT professional and web developer in Nairobi.">
+  <meta name="twitter:image" content="https://tim-karani.netlify.app/assets/img/og-cover.png">
 
-    <meta name="description"
-        content="Official portfolio of Tim Karani - IT Professional, Web Developer and Creative Problem Solver. Using technology with purpose to create solutions that serve people and make a meaningful impact.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
-    <meta name="keywords"
-        content="Tim Karani, IT Professional, Web Developer, Portfolio, Graphic Designer, PHP Developer">
+  <!-- Runs before paint: enables progressive enhancement + decides whether the intro plays -->
+  <script>
+    (function () {
+      var d = document.documentElement; d.classList.add('js');
+      var pref = null; try { pref = localStorage.getItem('tk-motion'); } catch (e) {}
+      var reduce = pref === 'off' || (pref !== 'on' && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      if (reduce) d.classList.add('reduce-motion');
+      if (pref === 'on') d.classList.add('motion-forced');
+      var seen = false; try { seen = sessionStorage.getItem('tk-intro') === '1'; } catch (e) {}
+      if (!reduce && !seen && !location.hash) d.classList.add('intro-run', 'bars-on');
+      // Failsafe: if the main script never arrives, show everything as plain content.
+      setTimeout(function () { if (!window.__tkReady) d.classList.remove('js', 'intro-run', 'intro-play', 'bars-on'); }, 3500);
+    })();
+  </script>
+  <script type="module" src="/assets/js/main.js"></script>
 
-    <meta name="author" content="Tim Karani">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-
-    <link rel="icon" href="assets/images/favicon.png">
-    <noscript><style>#loader{display:none !important;}</style></noscript>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Tim Karani","jobTitle":"IT Professional","url":"https://tim-karani.netlify.app/","email":"mailto:timothykarani001@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"knowsAbout":["Web development","PHP","MySQL","JavaScript","IT support","Technical documentation"]}
+  </script>
 </head>
-
 <body>
-
-<div id="loader">
-
-<h2>
-
-Tim Karani
-
-</h2>
-
-</div>
-
-<div id="progress-bar"></div>
-
-<!-- ==========================================
-     HEADER
-=========================================== -->
-
-<div id="site-header"></div>
-
-<!-- ==========================================
-     HERO SECTION
-=========================================== -->
-
-<section class="hero">
-
-<div class="hero-text">
-
-<div class="availability-badge">
-    <span></span>
-    Available for Opportunities
-</div>
-
-<p class="greeting">
-
-Hello, I'm
-
-</p>
-
-<h1>
-
-Tim <span>Karani</span>
-
-</h1>
-
-<h2 id="typing-text"></h2>
-
-<p class="hero-description">
-
-I build practical digital solutions that simplify processes, improve everyday workflows, and create meaningful user experiences.
-
-Passionate about technology, creativity, and continuous learning, I strive to use my skills to serve people and make a lasting impact.
-
-</p>
-
-<p class="mission">
-
-<strong>
-
-Using technology with purpose to create solutions that serve people and make a meaningful impact.
-
-</strong>
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="projects.html" class="btn primary-btn">
-
-View My Work
-
-</a>
-
-<a href="assets/documents/Tim_Karani_CV.pdf"
-class="btn secondary-btn" download>
-
-Download CV
-
-</a>
-
-<a href="contact.html" class="btn outline-btn">
-
-Let's Connect
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-    <div class="hero-glow"></div>
-
-    <div class="floating-circle circle-1"></div>
-
-    <div class="floating-circle circle-2"></div>
-
-    <div class="floating-square square-1"></div>
-
-    <div class="floating-square square-2"></div>
-
-    <img src="assets/images/profile.jpg"
-         alt="Tim Karani">
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     ABOUT PREVIEW
-=========================================== -->
-
-<section class="about-preview">
-
-<div class="section-title">
-
-<h2>About Me</h2>
-
-<p>
-
-A purpose-driven IT Professional passionate about solving problems through technology.
-
-</p>
-
-</div>
-
-<div class="about-content">
-
-<p>
-
-I believe technology should make life easier, businesses stronger, and communities better.
-
-From developing web applications to supporting IT infrastructure and exploring creative design, I enjoy building practical solutions that create real impact.
-
-</p>
-
-<a href="about.html" class="btn primary-btn">
-
-Read More
-
-</a>
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     TECH STACK
-=========================================== -->
-
-<section class="tech-stack">
-
-<div class="section-title">
-
-<h2>Tech Stack</h2>
-
-<p>
-
-Technologies and tools I use.
-
-</p>
-
-</div>
-
-<div class="tech-grid">
-
-<div class="tech-card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
-
-<div class="tech-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
-
-<div class="tech-card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
-
-<div class="tech-card"><i class="fab fa-php"></i><h3>PHP</h3></div>
-
-<div class="tech-card"><i class="fas fa-database"></i><h3>MySQL</h3></div>
-
-<div class="tech-card"><i class="fab fa-git-alt"></i><h3>Git</h3></div>
-
-<div class="tech-card"><i class="fab fa-github"></i><h3>GitHub</h3></div>
-
-<div class="tech-card"><i class="fas fa-code"></i><h3>VS Code</h3></div>
-
-<div class="tech-card"><i class="fas fa-server"></i><h3>XAMPP</h3></div>
-
-<div class="tech-card"><i class="fas fa-palette"></i><h3>Photoshop</h3></div>
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     FEATURED PROJECTS
-=========================================== -->
-
-<section class="featured-projects">
-
-<div class="section-title">
-
-<h2>Featured Projects</h2>
-
-<p>
-
-Projects that reflect my passion for building practical technology solutions.
-
-</p>
-
-</div>
-
-<div class="projects-grid">
-
-<article class="project-card">
-
-<h3>Career Guidance System</h3>
-
-<p>
-
-A PHP and MySQL web application developed as my diploma capstone project, helping students discover career paths based on their interests and skills.
-
-</p>
-
-<a href="projects.html">
-
-Learn More →
-
-</a>
-
-</article>
-
-<article class="project-card">
-
-<h3>Personal Portfolio Website</h3>
-
-<p>
-
-The website you're viewing now—designed to showcase my journey, skills, projects, and professional growth.
-
-</p>
-
-<a href="projects.html">
-
-Learn More →
-
-</a>
-
-</article>
-
-<article class="project-card">
-
-<h3>Graphic Design Journey</h3>
-
-<p>
-
-A growing collection of creative work as I continue developing my graphic design skills.
-
-</p>
-
-<a href="projects.html">
-
-Learn More →
-
-</a>
-
-</article>
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     SERVICES
-=========================================== -->
-
-<section class="services">
-
-<div class="section-title">
-
-<h2>Services</h2>
-
-<p>
-
-How I can help.
-
-</p>
-
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-
-<i class="fas fa-laptop-code"></i>
-
-<h3>Web Development</h3>
-
-<p>
-
-Responsive websites and dynamic web applications.
-
-</p>
-
-</div>
-
-<div class="service-card">
-
-<i class="fas fa-paint-brush"></i>
-
-<h3>Graphic Design</h3>
-
-<p>
-
-Creative visual solutions for digital communication.
-
-</p>
-
-</div>
-
-<div class="service-card">
-
-<i class="fas fa-network-wired"></i>
-
-<h3>IT Support</h3>
-
-<p>
-
-Reliable technical support, troubleshooting, and systems assistance.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     TIMELINE PREVIEW
-=========================================== -->
-
-<section class="timeline">
-
-<div class="section-title">
-
-<h2>My Journey</h2>
-
-</div>
-
-<div class="timeline-container">
-
-<div class="timeline-item">
-
-<h3>2023</h3>
-
-<p>KNEC Certificate in Information Technology (CIT)</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>Late 2023</h3>
-
-<p>Industrial Attachment – Mwangaza Inspirational Kenya Ltd</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>2025</h3>
-
-<p>KNEC Diploma in Information Technology (DIT)</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>2025</h3>
-
-<p>Built Career Guidance System (PHP)</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>Mid 2025</h3>
-
-<p>Joined as IT Attaché</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>2026 – Present</h3>
-
-<p>IT Intern</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ==========================================
-     CALL TO ACTION
-=========================================== -->
-
-<section class="cta">
-
-<h2>
-
-Let's Build Something Meaningful Together
-
-</h2>
-
-<p>
-
-Whether it's developing a website, supporting IT operations, or exploring innovative solutions, I'd love to connect and collaborate.
-
-</p>
-
-<a href="contact.html" class="btn primary-btn">
-
-Get In Touch
-
-</a>
-
-</section>
-
-<!-- ==========================================
-     FOOTER
-=========================================== -->
-
-<div id="site-footer"></div>
-
-<script src="assets/js/partials.js" defer></script>
-<script src="assets/js/script.js" defer></script>
-
-<button id="backToTop">
-
-<i class="fas fa-arrow-up"></i>
-
-</button>
-
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+
+  <header class="site-nav" id="top-nav">
+    <a class="brand" href="#top" aria-label="Tim Karani — back to top">
+      <span class="brand__mark" aria-hidden="true">TK</span>
+      <span class="brand__name">Tim Karani</span>
+    </a>
+    <p class="chapter-now" aria-hidden="true"><b data-chapter-num>00</b> / <span data-chapter-name>Opening</span></p>
+    <nav aria-label="Chapters">
+      <ul class="nav-links">
+        <li><a href="#identity"><span>01</span>Identity</a></li>
+        <li><a href="#capabilities"><span>02</span>Capabilities</a></li>
+        <li><a href="#work"><span>03</span>Work</a></li>
+        <li><a href="#toolkit"><span>04</span>Toolkit</a></li>
+        <li><a href="#journey"><span>05</span>Journey</a></li>
+        <li><a href="#method"><span>06</span>Method</a></li>
+        <li><a href="#contact"><span>07</span>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-tools">
+      <button class="motion-toggle" type="button" aria-pressed="true" data-motion-toggle>Motion: on</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>Menu</button>
+    </div>
+  </header>
+
+  <div class="menu-panel" id="menu" role="dialog" aria-modal="true" aria-label="Chapters" hidden>
+    <button class="menu-toggle menu-close" type="button" data-menu-close>Close</button>
+    <ol>
+      <li><a href="#identity"><span>01</span>Identity</a></li>
+      <li><a href="#capabilities"><span>02</span>Capabilities</a></li>
+      <li><a href="#work"><span>03</span>Work</a></li>
+      <li><a href="#toolkit"><span>04</span>Toolkit</a></li>
+      <li><a href="#journey"><span>05</span>Journey</a></li>
+      <li><a href="#method"><span>06</span>Method</a></li>
+      <li><a href="#contact"><span>07</span>Contact</a></li>
+    </ol>
+    <div class="menu-foot">
+      <a class="mono link-line" href="mailto:timothykarani001@gmail.com">timothykarani001@gmail.com</a>
+      <a class="mono link-line" href="/assets/documents/Tim_Karani_CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============================== OPENING ============================== -->
+    <section class="hero" id="top" aria-labelledby="hero-name" data-chapter="00" data-chapter-label="Opening">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__vignette" aria-hidden="true"></div>
+      <div class="hero__beam" aria-hidden="true"></div>
+      <div class="letterbox letterbox--top" aria-hidden="true"></div>
+      <div class="letterbox letterbox--bottom" aria-hidden="true"></div>
+
+      <div class="hero__boot" data-intro="boot" aria-hidden="true">
+        <p class="label"><span class="dot"></span>Signal acquired</p>
+        <p class="label">Nairobi, KE &nbsp;·&nbsp; 01°17′S 36°49′E</p>
+      </div>
+
+      <div class="hero__meta" data-intro="kicker" aria-hidden="true">
+        <p class="label">Reel 01 · Portfolio</p>
+        <p class="label tc" data-timecode>TC 00:00:00:00</p>
+        <hr>
+        <p class="label">Web applications</p>
+        <p class="label">IT support &amp; systems</p>
+        <p class="label">Operations &amp; documentation</p>
+      </div>
+
+      <div class="wrap hero__inner">
+        <p class="label label--teal hero__kicker" data-intro="kicker">IT Professional · Portfolio 2026</p>
+        <h1 class="hero__name" id="hero-name">
+          <span class="line line--1"><span>Tim</span></span>
+          <span class="line line--2"><span>Karani</span></span>
+        </h1>
+        <ul class="hero__descriptor label" data-intro="kicker" aria-label="Roles">
+          <li>IT Professional</li><li>Web Developer</li><li>Technology problem-solver</li>
+        </ul>
+
+        <div class="hero__grid" data-intro="identity">
+          <p class="hero__tagline">Technology with purpose. <em>Solutions that make a difference.</em></p>
+          <div>
+            <p class="hero__intro">I support the systems people rely on every day and build web applications that solve practical problems — from troubleshooting a broken workstation to designing a PHP and MySQL app from scratch.</p>
+            <div class="hero__cta" data-intro="cta">
+              <a class="btn btn--primary" href="#work">Explore my work <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn" href="#contact">Let's connect</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#identity" data-intro="cue" aria-label="Scroll to chapter one">
+        <span class="label">Scroll</span><span class="scroll-cue__line"></span>
+      </a>
+      <button class="skip-intro" type="button" data-skip-intro hidden>Skip intro ⏭</button>
+    </section>
+
+    <!-- ============================== 01 IDENTITY ============================== -->
+    <section class="chapter" id="identity" aria-labelledby="identity-title" data-chapter="01" data-chapter-label="Identity">
+      <div class="wrap">
+        <div class="chapter__head">
+          <p class="label chapter__num" data-reveal>Chapter 01 — Identity</p>
+          <h2 class="chapter__title" id="identity-title" data-reveal="mask">The person <span class="soft">behind the work</span></h2>
+        </div>
+
+        <div class="identity">
+          <p class="identity__statement" data-reveal>I learned IT the practical way — <span class="hl">in broadcast studios, server rooms and busy offices</span> — <span class="dim">and I bring that same practicality to every line of code I write.</span></p>
+
+          <div class="story" data-reveal>
+            <p>I've spent nearly two years working in IT, across a TV and radio broadcaster and a busy marketing agency. I keep people, devices and business systems running, and I design and build the web applications that make everyday work easier.</p>
+            <p>At <strong>Mwangaza Inspirational Kenya Ltd</strong>, a TV and radio broadcaster, I supported IT in a production-critical environment: studios, newsroom systems and a server room that can't go offline mid-broadcast.</p>
+            <p>At <strong>Metabel Zara Ltd</strong>, a marketing agency, I've been part of the IT function since July 2025. I support office and field teams, business systems, data collection and reporting, and I document the workflows that keep it all running. Alongside that I built <strong>Faulu</strong>, a complete PHP and MySQL career-guidance platform, from the ground up.</p>
+            <p>That work rests on a <strong>KNEC Certificate (2023)</strong> and <strong>Diploma in Information Technology (2025)</strong> from Regional Center Training Institute. Every role since has brought problems nobody had written a manual for, and solving them shaped how I work: understand the problem, work through it methodically, document it, and leave things better than I found them.</p>
+          </div>
+
+          <aside class="identity__dossier" data-reveal style="--d:.15s" aria-label="Profile summary">
+            <div class="dossier">
+              <div class="dossier__frame">
+                <!-- Viewfinder monogram. To use a real portrait, save it as /assets/images/portrait.jpg
+                     (square, at least 800px) and add inside this frame:
+                     <img src="/assets/images/portrait.jpg" alt="Portrait of Tim Karani" width="800" height="800" loading="lazy" decoding="async"> -->
+                <span class="viewfinder" aria-hidden="true">
+                  <span class="viewfinder__ring"></span><span class="viewfinder__ring viewfinder__ring--2"></span>
+                  <span class="viewfinder__cross"></span>
+                  <span class="viewfinder__mono">TK</span>
+                  <span class="viewfinder__read label">F2.8 · 35mm · ISO 400</span>
+                </span>
+                <span class="dossier__corner dossier__corner--tl" aria-hidden="true"></span>
+                <span class="dossier__corner dossier__corner--tr" aria-hidden="true"></span>
+                <span class="dossier__corner dossier__corner--bl" aria-hidden="true"></span>
+                <span class="dossier__corner dossier__corner--br" aria-hidden="true"></span>
+                <span class="dossier__rec label" aria-hidden="true">Rec · Subject file</span>
+              </div>
+              <dl>
+                <div><dt>Name</dt><dd>Tim Karani</dd></div>
+                <div><dt>Base</dt><dd>Nairobi, Kenya</dd></div>
+                <div><dt>Now</dt><dd>IT team, Metabel Zara Ltd</dd></div>
+                <div><dt>Experience</dt><dd>Nearly 2 years in IT · media &amp; marketing</dd></div>
+                <div><dt>Focus</dt><dd>Web applications · IT support · Operations &amp; documentation</dd></div>
+                <div><dt>Available</dt><dd><span class="dot"></span>Remote web projects: web apps &amp; websites</dd></div>
+              </dl>
+            </div>
+          </aside>
+
+          <ol class="principles" data-reveal aria-label="How I work">
+            <li><span class="label label--teal">P/01</span><div><h3>Practical over complicated</h3><p>The best fix is the one people can actually use and maintain after I've left the room.</p></div></li>
+            <li><span class="label label--teal">P/02</span><div><h3>Understand the person, not just the ticket</h3><p>Good support starts with listening to what's frustrating someone — the fault is often only half of it.</p></div></li>
+            <li><span class="label label--teal">P/03</span><div><h3>Write it down</h3><p>Documented processes and fixes are how reliable systems — and reliable teams — are built.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 02 CAPABILITIES ============================== -->
+    <section class="chapter" id="capabilities" aria-labelledby="cap-title" data-chapter="02" data-chapter-label="Capabilities">
+      <div class="wrap">
+        <div class="chapter__head">
+          <p class="label chapter__num" data-reveal>Chapter 02 — Capabilities</p>
+          <h2 class="chapter__title" id="cap-title" data-reveal="mask">Don't read the skills. <span class="soft">Watch them work.</span></h2>
+          <p class="chapter__lede" data-reveal>Four short scenes, each one a working demonstration. Some show real experience; some are interactive models of how I think. Each is labelled so you always know which is which.</p>
+        </div>
+
+        <!-- ---------- SCENE A: WEB ---------- -->
+        <article class="scene" id="scene-web" aria-labelledby="scene-web-title">
+          <div class="slate" data-reveal><span class="slate__clap" aria-hidden="true"></span><span>Scene <b>02A</b></span><span>Web development</span><span>Take: Login → Dashboard</span></div>
+          <h3 class="scene__title" id="scene-web-title" data-reveal>Building a digital experience</h3>
+          <p class="scene__lede" data-reveal>Scroll through how a feature comes together, layer by layer — the way I built the login and recommendations flow in my career-guidance app.</p>
+
+          <div class="build" data-step="1" data-scene="build">
+            <div class="build__stage">
+              <div class="browser" aria-hidden="true">
+                <div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url" data-build-url>localhost/faulu/login.php</span></div>
+                <div class="browser__view">
+                  <div class="bv bv-wire">
+                    <div class="box" style="inset:4% 4% auto 4%;height:12%"><span>&lt;header&gt;</span></div>
+                    <div class="box" style="left:28%;right:28%;top:24%;bottom:12%"><span>&lt;form&gt;</span></div>
+                    <div class="box" style="left:33%;right:33%;top:38%;height:11%"><span>&lt;input email&gt;</span></div>
+                    <div class="box" style="left:33%;right:33%;top:54%;height:11%"><span>&lt;input password&gt;</span></div>
+                    <div class="box" style="left:33%;right:33%;top:71%;height:10%"><span>&lt;button&gt;</span></div>
+                  </div>
+                  <div class="app">
+                    <div class="app__top"><span class="app__logo">FAULU</span><span class="mono" style="font-size:.85em">Career guidance</span></div>
+                    <div class="app__body">
+                      <div class="login">
+                        <b>Welcome back</b>
+                        <div class="field field--email"><i>Email</i><u></u><em>Enter a valid email address</em></div>
+                        <div class="field"><i>Password</i><u></u></div>
+                        <div class="login__btn">Sign in</div>
+                      </div>
+                      <div class="dash">
+                        <div class="dash__side"><span></span><span></span><span></span><span></span></div>
+                        <div class="dash__main">
+                          <b>Your career matches</b>
+                          <span class="mono" style="color:var(--muted);font-size:.8em">Based on your questionnaire</span>
+                          <div class="rec"><span>Software Developer</span><small>strong</small></div>
+                          <div class="rec"><span>IT Support Specialist</span><small>strong</small></div>
+                          <div class="rec"><span>Graphic Designer</span><small>good</small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="codecard" aria-hidden="true">
+                <div class="codecard__tab"><span data-code-file>login.html</span><span data-code-lang>HTML</span></div>
+                <pre data-code></pre>
+              </div>
+            </div>
+
+            <ol class="build__steps">
+              <li class="build__step" data-step-trigger="1">
+                <span class="label">Layer 01 · Structure</span>
+                <h4>Start with meaning, not decoration</h4>
+                <p>Semantic HTML first: a real form, real labels, real buttons. It's what makes a page accessible and easy to style later.</p>
+                <span class="label build__tech">HTML</span>
+              </li>
+              <li class="build__step" data-step-trigger="2">
+                <span class="label">Layer 02 · Presentation</span>
+                <h4>Make it clear on every screen</h4>
+                <p>CSS gives it hierarchy and a responsive layout that works on a small Android phone as well as a desktop.</p>
+                <span class="label build__tech">CSS · Responsive layout</span>
+              </li>
+              <li class="build__step" data-step-trigger="3">
+                <span class="label">Layer 03 · Behaviour</span>
+                <h4>Check every input, twice</h4>
+                <p>HTML5 catches obvious mistakes in the browser. PHP then checks every field again on the server — required fields, password strength, matching confirmation — because the browser can't be trusted on its own.</p>
+                <span class="label build__tech">HTML5 · PHP validation</span>
+              </li>
+              <li class="build__step" data-step-trigger="4">
+                <span class="label">Layer 04 · Application logic</span>
+                <h4>Authenticate safely</h4>
+                <p>PHP looks the user up by email or username with a prepared statement, checks the bcrypt hash and starts a fresh session. Every form also carries a CSRF token.</p>
+                <span class="label build__tech">PHP · Sessions · Auth</span>
+              </li>
+              <li class="build__step" data-step-trigger="5">
+                <span class="label">Layer 05 · Data</span>
+                <h4>Turn skills into careers</h4>
+                <p>MySQL stores each career with the skills it requires. The query returns every career that matches the skills a student picked, and the result is saved to their history.</p>
+                <span class="label build__tech">MySQL</span>
+              </li>
+            </ol>
+          </div>
+          <p class="scene__note"><span class="flag">Illustrative recreation</span> The interface is a simplified, animated rebuild. Code in layers 03–05 is excerpted from the real app; layers 01–02 are illustrative. <a class="link-line" href="/projects/faulu-career-guidance.html">See the full case study →</a></p>
+        </article>
+
+        <!-- ---------- SCENE B: SUPPORT ---------- -->
+        <article class="scene" id="scene-support" aria-labelledby="scene-support-title">
+          <div class="slate" data-reveal><span class="slate__clap" aria-hidden="true"></span><span>Scene <b>02B</b></span><span>IT support &amp; systems</span><span>Take: The support desk</span></div>
+          <h3 class="scene__title" id="scene-support-title" data-reveal>When something stops working</h3>
+          <p class="scene__lede" data-reveal>Choose a device on the map. The console shows how I'd work through the kind of issue I handle in my day-to-day IT work — methodically, and with a note left behind.</p>
+
+          <div class="ops" data-scene="support">
+            <div class="netmap" role="group" aria-label="Office technology map — choose a device">
+              <svg class="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M50 50 L18 24"/><path d="M50 50 L82 24"/><path d="M50 50 L16 74"/><path d="M50 50 L84 74"/><path d="M50 50 L50 86"/>
+                <path class="flow" data-wire="workstation" d="M50 50 L18 24"/>
+                <path class="flow" data-wire="printer" d="M50 50 L82 24"/>
+                <path class="flow" data-wire="studio" d="M50 50 L16 74"/>
+                <path class="flow" data-wire="field" d="M50 50 L84 74"/>
+                <path class="flow" data-wire="server" d="M50 50 L50 86"/>
+              </svg>
+              <button class="node node--hub" type="button" style="left:50%;top:50%" data-node="network" aria-pressed="false">
+                <span class="node__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 17h.01M11 17h.01M12 14V9M8 6a6 6 0 0 1 8 0M5.5 3.5a10 10 0 0 1 13 0"/></svg></span>
+                <span class="node__label">Network</span>
+              </button>
+              <button class="node" type="button" style="left:18%;top:24%" data-node="workstation" aria-pressed="false">
+                <span class="node__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span>
+                <span class="node__label">Workstation</span>
+              </button>
+              <button class="node" type="button" style="left:82%;top:24%" data-node="printer" aria-pressed="false">
+                <span class="node__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="1.5"/><path d="M7 14h10v7H7z"/></svg></span>
+                <span class="node__label">Printer</span>
+              </button>
+              <button class="node" type="button" style="left:16%;top:74%" data-node="studio" aria-pressed="false">
+                <span class="node__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+                <span class="node__label">Studio PC</span>
+              </button>
+              <button class="node" type="button" style="left:84%;top:74%" data-node="field" aria-pressed="false">
+                <span class="node__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+                <span class="node__label">Field device</span>
+              </button>
+              <button class="node" type="button" style="left:50%;top:86%" data-node="server" aria-pressed="false">
+                <span class="node__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="3" width="16" height="7" rx="1.5"/><rect x="4" y="14" width="16" height="7" rx="1.5"/><path d="M8 6.5h.01M8 17.5h.01"/></svg></span>
+                <span class="node__label">Server room</span>
+              </button>
+            </div>
+
+            <div class="console" aria-live="polite">
+              <div class="console__head"><span class="label label--teal" data-console-title>support-console</span><span class="label" data-console-state>idle</span></div>
+              <ol class="console__log" data-console-log>
+                <li class="is-in"><span class="t">--:--</span>Select a device on the map to open a support scenario.</li>
+              </ol>
+              <p class="console__foot" data-console-foot>Each scenario follows the same loop: reproduce → isolate → fix → verify → document.</p>
+            </div>
+          </div>
+          <p class="scene__note"><span class="flag">Representative scenarios</span> Based on the type of work I've done; not a live system, and no real organisation data.</p>
+        </article>
+
+        <!-- ---------- SCENE C: DATA ---------- -->
+        <article class="scene" id="scene-data" aria-labelledby="scene-data-title">
+          <div class="slate" data-reveal><span class="slate__clap" aria-hidden="true"></span><span>Scene <b>02C</b></span><span>Databases &amp; application logic</span><span>Take: A request, end to end</span></div>
+          <h3 class="scene__title" id="scene-data-title" data-reveal>Follow one request</h3>
+          <p class="scene__lede" data-reveal>Pick some skills and send the request. Watch it travel from the browser to the server, into the database and back with an answer — the same matching my career-guidance app performs.</p>
+
+          <div class="flow" data-scene="flow">
+            <form class="flow__controls" data-flow-form>
+              <fieldset class="chips">
+                <legend class="label">Your skills (choose up to 3)</legend>
+                <label class="chip"><input type="checkbox" name="i" value="problem solving"><span>Problem solving</span></label>
+                <label class="chip"><input type="checkbox" name="i" value="programming"><span>Programming</span></label>
+                <label class="chip"><input type="checkbox" name="i" value="design"><span>Design</span></label>
+                <label class="chip"><input type="checkbox" name="i" value="communication"><span>Communication</span></label>
+                <label class="chip"><input type="checkbox" name="i" value="data analysis"><span>Data analysis</span></label>
+                <label class="chip"><input type="checkbox" name="i" value="teaching"><span>Teaching</span></label>
+                <label class="chip"><input type="checkbox" name="i" value="organisation"><span>Organisation</span></label>
+              </fieldset>
+              <div><button class="btn btn--primary" type="submit" data-flow-run>Send request <span class="arrow" aria-hidden="true">→</span></button></div>
+              <p class="label" data-flow-msg aria-live="polite"></p>
+            </form>
+
+            <div class="flow__out">
+              <div class="sql">
+                <div class="sql__head"><span class="label label--teal">query.sql</span><span class="label">MySQL</span></div>
+                <pre data-flow-sql><span class="c">-- The query appears here when you send a request</span></pre>
+              </div>
+              <ol class="results" data-flow-results aria-live="polite" aria-label="Recommended careers">
+                <li class="empty">No results yet. Choose one or more skills and send the request.</li>
+              </ol>
+            </div>
+
+            <div class="flow__pipe">
+              <div class="pipeline" aria-hidden="true">
+                <span class="packet" data-packet></span>
+                <div class="stage" data-stage="0"><div class="stage__box">01</div><span class="stage__name">Browser</span><span class="stage__desc">Form validated, request sent</span></div>
+                <div class="stage" data-stage="1"><div class="stage__box">02</div><span class="stage__name">PHP</span><span class="stage__desc">Session checked, input sanitised</span></div>
+                <div class="stage" data-stage="2"><div class="stage__box">03</div><span class="stage__name">MySQL</span><span class="stage__desc">Matching query runs</span></div>
+                <div class="stage" data-stage="3"><div class="stage__box">04</div><span class="stage__name">Response</span><span class="stage__desc">Ranked results rendered</span></div>
+              </div>
+            </div>
+          </div>
+          <p class="scene__note"><span class="flag flag--real">Working demo</span> Runs in your browser on a small sample of careers, using the same one-LIKE-per-skill matching as Faulu. It also ranks by number of matching skills, the improvement planned for Faulu's next version.</p>
+        </article>
+
+        <!-- ---------- SCENE D: OPERATIONS ---------- -->
+        <article class="scene" id="scene-ops" aria-labelledby="scene-ops-title">
+          <div class="slate" data-reveal><span class="slate__clap" aria-hidden="true"></span><span>Scene <b>02D</b></span><span>IT operations &amp; workflows</span><span>Take: Keeping order</span></div>
+          <h3 class="scene__title" id="scene-ops-title" data-reveal>Structure behind the scenes</h3>
+          <p class="scene__lede" data-reveal>Much of IT work is invisible: who can access what, which device is where, how a fix gets recorded. This concept console shows how I think about organising it. Try the workflow board — select a card to move it forward.</p>
+
+          <div class="dashboard" data-scene="dashboard">
+            <div class="dashboard__bar">
+              <span class="label label--teal">ops-console / concept</span>
+              <span class="flag">Concept · sample data · not a live system</span>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Operations views">
+              <button class="tab" role="tab" id="tab-workflow" aria-controls="panel-workflow" aria-selected="true">Workflow</button>
+              <button class="tab" role="tab" id="tab-access" aria-controls="panel-access" aria-selected="false" tabindex="-1">Access</button>
+              <button class="tab" role="tab" id="tab-assets" aria-controls="panel-assets" aria-selected="false" tabindex="-1">Assets</button>
+              <button class="tab" role="tab" id="tab-docs" aria-controls="panel-docs" aria-selected="false" tabindex="-1">Docs</button>
+            </div>
+
+            <div class="panel" role="tabpanel" id="panel-workflow" aria-labelledby="tab-workflow">
+              <p class="panel__intro">Every request follows the same path. Nothing is "done" until it's verified with the user and documented.</p>
+              <div class="board" data-board>
+                <div class="lane" data-lane="0"><h4>Request <span data-count></span></h4>
+                  <button class="card" type="button">New starter needs a laptop set up<small>REQ-A · setup</small></button>
+                  <button class="card" type="button">Shared drive not visible on one PC<small>REQ-B · access</small></button>
+                </div>
+                <div class="lane" data-lane="1"><h4>Triage <span data-count></span></h4>
+                  <button class="card" type="button">Field device not syncing data<small>REQ-C · field</small></button>
+                </div>
+                <div class="lane" data-lane="2"><h4>In progress <span data-count></span></h4>
+                  <button class="card" type="button">Printer queue stuck<small>REQ-D · hardware</small></button>
+                </div>
+                <div class="lane" data-lane="3"><h4>Verified <span data-count></span></h4></div>
+                <div class="lane" data-lane="4"><h4>Documented <span data-count></span></h4>
+                  <button class="card" type="button" disabled>Email signature standardised<small>REQ-E · done</small></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" role="tabpanel" id="panel-access" aria-labelledby="tab-access" hidden>
+              <p class="panel__intro">Least privilege: each role gets what it needs to do the job, nothing more.</p>
+              <div class="table-wrap"><table class="grid">
+                <caption class="visually-hidden">Sample role permissions</caption>
+                <thead><tr><th scope="col">Permission</th><th scope="col">Admin</th><th scope="col">Supervisor</th><th scope="col">Field rep</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row" style="text-align:left;font-weight:400;padding:12px">Submit visit reports</th><td class="yes">yes</td><td class="yes">yes</td><td class="yes">yes</td></tr>
+                  <tr><th scope="row" style="text-align:left;font-weight:400;padding:12px">Review team reports</th><td class="yes">yes</td><td class="yes">yes</td><td class="no">no</td></tr>
+                  <tr><th scope="row" style="text-align:left;font-weight:400;padding:12px">Manage user accounts</th><td class="yes">yes</td><td class="no">no</td><td class="no">no</td></tr>
+                  <tr><th scope="row" style="text-align:left;font-weight:400;padding:12px">Export data</th><td class="yes">yes</td><td class="yes">yes</td><td class="no">no</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+
+            <div class="panel" role="tabpanel" id="panel-assets" aria-labelledby="tab-assets" hidden>
+              <p class="panel__intro">A simple inventory answers the questions that always come up: what is it, who has it, and does it work?</p>
+              <div class="table-wrap"><table class="grid">
+                <caption class="visually-hidden">Sample asset inventory</caption>
+                <thead><tr><th scope="col">Tag</th><th scope="col">Device</th><th scope="col">Assigned to</th><th scope="col">Status</th></tr></thead>
+                <tbody>
+                  <tr><td class="mono">AST-001</td><td>Laptop</td><td>Office team</td><td><span class="pill pill--ok">In service</span></td></tr>
+                  <tr><td class="mono">AST-002</td><td>Laptop</td><td>Field team</td><td><span class="pill pill--warn">Needs repair</span></td></tr>
+                  <tr><td class="mono">AST-003</td><td>Printer</td><td>Shared</td><td><span class="pill pill--ok">In service</span></td></tr>
+                  <tr><td class="mono">AST-004</td><td>Smartphone</td><td>Unassigned</td><td><span class="pill pill--off">In storage</span></td></tr>
+                </tbody>
+              </table></div>
+            </div>
+
+            <div class="panel" role="tabpanel" id="panel-docs" aria-labelledby="tab-docs" hidden>
+              <p class="panel__intro">If a fix isn't written down, it has to be rediscovered. These are the kinds of documents I write and maintain.</p>
+              <ul class="docs-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/></svg><span>New device setup checklist</span><span class="label">SOP</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/></svg><span>Printer troubleshooting guide</span><span class="label">How-to</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/></svg><span>Field data collection workflow</span><span class="label">Process</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/></svg><span>Fix log — recurring issues &amp; resolutions</span><span class="label">Log</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="scene__note"><span class="flag">Concept demonstration</span> Built to show my approach to operations. The record names and data are invented samples.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== 03 WORK ============================== -->
+    <section class="chapter" id="work" aria-labelledby="work-title" data-chapter="03" data-chapter-label="Work">
+      <div class="wrap">
+        <div class="chapter__head">
+          <p class="label chapter__num" data-reveal>Chapter 03 — Work</p>
+          <h2 class="chapter__title" id="work-title" data-reveal="mask">The archive</h2>
+          <p class="chapter__lede" data-reveal>Each project is labelled honestly — completed, live, concept or in progress. Select a title to open its case study.</p>
+        </div>
+
+        <div class="archive" data-scene="archive">
+          <ol class="archive__list">
+            <li class="entry" data-preview="faulu" style="--accent: var(--teal)">
+              <a class="entry__row" href="/projects/faulu-career-guidance.html">
+                <span class="entry__idx">01</span>
+                <span>
+                  <span class="entry__cover-sm" aria-hidden="true"><span class="cover cover--faulu" style="display:block;aspect-ratio:16/9;min-height:0"><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice"><g stroke="#2DD4BF" fill="none" opacity=".5"><circle cx="300" cy="80" r="40"/><circle cx="300" cy="80" r="70" opacity=".5"/><path d="M60 170 C150 170 180 80 300 80"/></g><g fill="#2DD4BF"><circle cx="60" cy="170" r="4"/><circle cx="300" cy="80" r="5"/></g></svg></span></span>
+                  <h3 class="entry__title">Faulu Career Guidance System</h3>
+                  <span class="entry__meta"><span class="label">Web application · PHP · MySQL</span><span class="label">2025</span><span class="status status--completed">Completed · Independent build</span></span>
+                </span>
+                <span class="entry__go" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="entry" data-preview="field" style="--accent: var(--amber)">
+              <a class="entry__row" href="/projects/field-operations-system.html">
+                <span class="entry__idx">02</span>
+                <span>
+                  <span class="entry__cover-sm" aria-hidden="true"><span class="cover cover--field" style="display:block;aspect-ratio:16/9;min-height:0"><svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice"><g stroke="#F5B54A" fill="none" opacity=".55"><path d="M40 180 L120 120 L210 150 L300 70 L360 90"/></g><g fill="#F5B54A"><circle cx="120" cy="120" r="4"/><circle cx="210" cy="150" r="4"/><circle cx="300" cy="70" r="5"/></g></svg></span></span>
+                  <h3 class="entry__title">Field Operations &amp; Retail Execution System</h3>
+                  <span class="entry__meta"><span class="label">System design · Workflow</span><span class="label">2026</span><span class="status status--concept">Concept · in design</span></span>
+                </span>
+                <span class="entry__go" aria-hidden="true">→</span>
+              </a>
+            </li>
+            <li class="entry" data-preview="folio" style="--accent: var(--signal)">
+              <div class="entry__row" style="cursor:default">
+                <span class="entry__idx">03</span>
+                <span>
+                  <h3 class="entry__title">This portfolio</h3>
+                  <span class="entry__meta"><span class="label">Front-end · HTML · CSS · JavaScript</span><span class="label">2026</span><span class="status status--live">Live · version 2</span></span>
+                </span>
+                <span></span>
+              </div>
+              <details>
+                <summary>Read the summary</summary>
+                <div class="inline-case">
+                  <p><strong>Problem.</strong> My first portfolio — a multi-page HTML, CSS and JavaScript site with dark mode and scroll animations — listed my skills but didn't show them.</p>
+                  <p><strong>What I did.</strong> Rebuilt it as a single cinematic story with working demonstrations: a request-to-database demo, an interactive support console and a scroll-built interface. No framework and no build step, so it stays fast and easy for me to maintain.</p>
+                  <p><strong>Built with.</strong> Semantic HTML, modern CSS (custom properties, sticky scrollytelling), vanilla JavaScript modules, Canvas, Netlify Forms. Respects reduced-motion settings and works without JavaScript.</p>
+                </div>
+              </details>
+            </li>
+            <li class="entry" data-preview="design" style="--accent: #E879F9">
+              <div class="entry__row" style="cursor:default">
+                <span class="entry__idx">04</span>
+                <span>
+                  <h3 class="entry__title">Graphic design practice</h3>
+                  <span class="entry__meta"><span class="label">Visual design · Photoshop</span><span class="label">Ongoing</span><span class="status status--progress">In progress</span></span>
+                </span>
+                <span></span>
+              </div>
+              <details>
+                <summary>Read the summary</summary>
+                <div class="inline-case">
+                  <p>A growing body of work as I develop my visual design skills in Adobe Photoshop — social media graphics, branding concepts and promotional visuals. Learning design makes me a better builder of interfaces: hierarchy, contrast and clarity matter in both.</p>
+                  <p class="label">Gallery coming once a selection is ready to publish.</p>
+                </div>
+              </details>
+            </li>
+          </ol>
+
+          <aside class="preview" aria-hidden="true">
+            <div class="preview__frame">
+              <div class="cover cover--faulu is-shown" data-cover="faulu">
+                <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+                  <defs><radialGradient id="gf" cx="75%" cy="30%" r="40%"><stop offset="0" stop-color="#2DD4BF" stop-opacity=".35"/><stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/></radialGradient></defs>
+                  <rect width="400" height="300" fill="url(#gf)"/>
+                  <g stroke="#2DD4BF" fill="none"><circle cx="300" cy="90" r="34" opacity=".8"/><circle cx="300" cy="90" r="62" opacity=".35"/><circle cx="300" cy="90" r="96" opacity=".15"/>
+                  <path d="M40 240 C120 240 170 160 266 104" opacity=".7"/><path d="M40 200 C110 200 150 130 270 96" opacity=".35"/><path d="M40 160 C100 160 150 100 272 88" opacity=".2"/></g>
+                  <g fill="#2DD4BF"><circle cx="40" cy="240" r="4"/><circle cx="40" cy="200" r="3" opacity=".6"/><circle cx="40" cy="160" r="3" opacity=".4"/><circle cx="300" cy="90" r="6"/></g>
+                </svg>
+                <span class="cover__tag label label--teal">Case 01 · Completed</span>
+                <span class="cover__title">Interests in.<br>Direction out.</span>
+              </div>
+              <div class="cover cover--field" data-cover="field">
+                <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+                  <g stroke="#F5B54A" fill="none" opacity=".25"><path d="M0 60H400M0 120H400M0 180H400M0 240H400M80 0V300M160 0V300M240 0V300M320 0V300"/></g>
+                  <path d="M40 230 L120 150 L200 190 L280 90 L360 120" stroke="#F5B54A" stroke-width="1.5" fill="none"/>
+                  <g fill="#0D0F1C" stroke="#F5B54A"><circle cx="120" cy="150" r="7"/><circle cx="200" cy="190" r="7"/><circle cx="280" cy="90" r="9"/></g>
+                </svg>
+                <span class="cover__tag label" style="color:var(--amber)">Case 02 · Concept</span>
+                <span class="cover__title">From the shop floor<br>to the report.</span>
+              </div>
+              <div class="cover cover--folio" data-cover="folio">
+                <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><g stroke="#7DD3FC" fill="none" opacity=".3"><path d="M-20 260 L200 140 L420 260M-20 300 L200 170 L420 300M200 0V140"/></g><circle cx="200" cy="140" r="5" fill="#7DD3FC"/></svg>
+                <span class="cover__tag label label--blue">Case 03 · Live</span>
+                <span class="cover__title">The work,<br>shown working.</span>
+              </div>
+              <div class="cover cover--design" data-cover="design">
+                <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#E879F9" opacity=".4"><rect x="230" y="40" width="120" height="120"/><circle cx="250" cy="170" r="70"/></g></svg>
+                <span class="cover__tag label" style="color:#E879F9">Case 04 · In progress</span>
+                <span class="cover__title">Learning to<br>see clearly.</span>
+              </div>
+            </div>
+            <div class="preview__cap"><span class="label" data-preview-cap>Faulu Career Guidance System</span><span class="label">Decorative cover</span></div>
+          </aside>
+        </div>
+
+        <div class="bench">
+          <p class="label" data-reveal>On the bench — planned next</p>
+          <ul class="bench__list" data-reveal>
+            <li><span class="status status--planned">Planned</span><h3>IT automation scripts</h3><p>Small tools for repetitive support work — ticket logging, routine checks and reports — based on real needs I've seen on the job.</p></li>
+            <li><span class="status status--planned">Planned</span><h3>Networking &amp; systems lab</h3><p>A hands-on home lab to build on my server-room exposure: basic network configuration, services and proper systems documentation.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 04 TOOLKIT ============================== -->
+    <section class="chapter" id="toolkit" aria-labelledby="toolkit-title" data-chapter="04" data-chapter-label="Toolkit">
+      <div class="wrap">
+        <div class="chapter__head">
+          <p class="label chapter__num" data-reveal>Chapter 04 — Toolkit</p>
+          <h2 class="chapter__title" id="toolkit-title" data-reveal="mask">What I work with, <span class="soft">honestly rated</span></h2>
+          <p class="chapter__lede" data-reveal>No percentages. Each tool is marked by how I've actually used it. Filter by level, or select any item to see where it comes from.</p>
+        </div>
+
+        <div class="legend" role="group" aria-label="Filter by level" data-legend>
+          <button type="button" aria-pressed="true" data-filter="all">All</button>
+          <button type="button" aria-pressed="false" data-filter="used"><span class="mark mark--used" aria-hidden="true"></span>Used in projects</button>
+          <button type="button" aria-pressed="false" data-filter="practice"><span class="mark mark--practice" aria-hidden="true"></span>Practical work experience</button>
+          <button type="button" aria-pressed="false" data-filter="learning"><span class="mark mark--learning" aria-hidden="true"></span>Expanding into</button>
+        </div>
+
+        <div class="bay" data-bay data-filter="all">
+          <div class="bay__col" data-reveal>
+            <h3>Web development</h3><p>Interfaces &amp; application logic</p>
+            <ul class="tools">
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>HTML</span><span class="tool__note">Faulu app; both versions of this portfolio. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>CSS &amp; responsive layout</span><span class="tool__note">Faulu app; this portfolio's design system. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>JavaScript</span><span class="tool__note">Show/hide password and remember-me in Faulu; every interactive scene on this site. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>PHP</span><span class="tool__note">Faulu's backend: authentication, sessions, CSRF protection, validation, an admin panel and database access. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="learning" aria-expanded="false"><span class="mark mark--learning" aria-hidden="true"></span><span>Modern frameworks</span><span class="tool__note">Building on my PHP foundation toward full-stack development. <span class="visually-hidden">Level: expanding into.</span></span></button></li>
+            </ul>
+          </div>
+          <div class="bay__col" data-reveal style="--d:.08s">
+            <h3>Data</h3><p>Storing, querying, reporting</p>
+            <ul class="tools">
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>MySQL</span><span class="tool__note">Faulu's database: users, careers, results, saved careers and goals. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>Microsoft Excel</span><span class="tool__note">Data collection and reporting for field and office teams at Metabel Zara. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>Google Sheets</span><span class="tool__note">Shared trackers and operational reporting. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>CRM &amp; field tracking systems</span><span class="tool__note">Day-to-day exposure supporting field marketing teams. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+            </ul>
+          </div>
+          <div class="bay__col" data-reveal style="--d:.16s">
+            <h3>Tools &amp; workflow</h3><p>How the work gets done</p>
+            <ul class="tools">
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>VS Code</span><span class="tool__note">My everyday editor for all web projects. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>XAMPP</span><span class="tool__note">Local Apache, PHP and MySQL environment for developing Faulu. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="used" aria-expanded="false"><span class="mark mark--used" aria-hidden="true"></span><span>Git &amp; GitHub</span><span class="tool__note">Version control for my portfolio and projects. <span class="visually-hidden">Level: used in projects.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="learning" aria-expanded="false"><span class="mark mark--learning" aria-hidden="true"></span><span>Adobe Photoshop</span><span class="tool__note">Building my graphic design practice. <span class="visually-hidden">Level: expanding into.</span></span></button></li>
+            </ul>
+          </div>
+          <div class="bay__col" data-reveal style="--d:.24s">
+            <h3>IT operations</h3><p>Keeping people productive</p>
+            <ul class="tools">
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>Hardware &amp; software troubleshooting</span><span class="tool__note">Day to day at a broadcaster and a marketing agency. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>User support</span><span class="tool__note">Office staff, studio teams and field marketing teams. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>Computer setup &amp; configuration</span><span class="tool__note">Setting up and maintaining staff machines and software. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="practice" aria-expanded="false"><span class="mark mark--practice" aria-hidden="true"></span><span>Technical &amp; process documentation</span><span class="tool__note">Documenting workflows, fixes and business processes. <span class="visually-hidden">Level: practical work experience.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="learning" aria-expanded="false"><span class="mark mark--learning" aria-hidden="true"></span><span>Networking &amp; server administration</span><span class="tool__note">Hands-on in a broadcast server room and with day-to-day network issues; now going deeper into administration. <span class="visually-hidden">Level: expanding into.</span></span></button></li>
+              <li><button class="tool" type="button" data-level="learning" aria-expanded="false"><span class="mark mark--learning" aria-hidden="true"></span><span>IT automation scripting</span><span class="tool__note">Planned tools for routine support tasks. <span class="visually-hidden">Level: expanding into.</span></span></button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 05 JOURNEY ============================== -->
+    <section class="chapter" id="journey" aria-labelledby="journey-title" data-chapter="05" data-chapter-label="Journey">
+      <div class="wrap">
+        <div class="chapter__head">
+          <p class="label chapter__num" data-reveal>Chapter 05 — Journey</p>
+          <h2 class="chapter__title" id="journey-title" data-reveal="mask">Chapters so far</h2>
+          <p class="chapter__lede" data-reveal>Training, real-world IT work and the products I build — each step building on the last.</p>
+        </div>
+
+        <div class="timeline" data-timeline>
+          <span class="timeline__rail" aria-hidden="true"><i></i></span>
+          <ol class="timeline__list">
+          <li class="milestone" data-reveal>
+            <span class="milestone__kind"><span class="label milestone__when">2023</span><span class="label">Education</span></span>
+            <h3>KNEC Certificate in Information Technology</h3>
+            <p class="milestone__where">Regional Center Training Institute</p>
+            <ul><li>Foundations in systems analysis and design, databases, web development, networking and operating systems.</li></ul>
+          </li>
+          <li class="milestone" data-reveal>
+            <span class="milestone__kind"><span class="label milestone__when">Aug – Nov 2023</span><span class="label">Work · Media</span></span>
+            <h3>IT Attaché / IT Support Trainee</h3>
+            <p class="milestone__where">Mwangaza Inspirational Kenya Ltd — TV &amp; radio broadcaster</p>
+            <ul>
+              <li>Day-to-day IT support across broadcast departments, studios and newsroom systems.</li>
+              <li>Computer setup, troubleshooting and staff user support.</li>
+              <li>Supported server-room operations and network tasks alongside the senior IT team.</li>
+            </ul>
+          </li>
+          <li class="milestone" data-reveal>
+            <span class="milestone__kind"><span class="label milestone__when">2025</span><span class="label">Education</span></span>
+            <h3>KNEC Diploma in Information Technology</h3>
+            <p class="milestone__where">Regional Center Training Institute</p>
+            <ul><li>Deeper study in systems analysis, database management, web development, networking and operating systems.</li></ul>
+          </li>
+          <li class="milestone" data-reveal>
+            <span class="milestone__kind"><span class="label milestone__when">2025</span><span class="label">Product</span></span>
+            <h3>Built the Faulu Career Guidance System</h3>
+            <p class="milestone__where">Independent build · designed, developed and deployed end to end</p>
+            <ul><li>A full PHP and MySQL web platform: secure accounts, skills-based career matching, saved careers, a goals tracker and an admin panel for managing content and users.</li></ul>
+          </li>
+          <li class="milestone" data-reveal>
+            <span class="milestone__kind"><span class="label milestone__when">Jul 2025 – Present</span><span class="label">Work · Marketing</span></span>
+            <h3>IT Attaché → IT Intern</h3>
+            <p class="milestone__where">Metabel Zara Ltd — marketing agency (attaché Jul–Oct 2025, intern since Jan 2026)</p>
+            <ul>
+              <li>IT support for office and field marketing teams: hardware, software and user issues.</li>
+              <li>Support for data collection, reporting and internal business systems.</li>
+              <li>Documenting workflows and contributing to process improvements with management.</li>
+            </ul>
+          </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 06 METHOD ============================== -->
+    <section class="chapter method" id="method" aria-labelledby="method-title" data-chapter="06" data-chapter-label="Method" data-scene="method">
+      <div class="method__sticky">
+        <div class="wrap">
+          <div class="method__grid">
+            <div>
+              <p class="label chapter__num">Chapter 06 — Method</p>
+              <h2 class="chapter__title" id="method-title" style="margin:16px 0 28px">From broken <span class="soft">to working</span></h2>
+              <ol class="method__steps" data-method-steps>
+                <li><span class="label label--teal">01</span><div><b>Problem</b><p>Name the actual issue — what's broken, for whom, and why it matters.</p></div></li>
+                <li><span class="label label--teal">02</span><div><b>Investigation</b><p>Reproduce it, ask questions, check logs, rule things out one by one.</p></div></li>
+                <li><span class="label label--teal">03</span><div><b>Design</b><p>Choose the simplest fix that solves it properly, not just for today.</p></div></li>
+                <li><span class="label label--teal">04</span><div><b>Implementation</b><p>Make the change carefully, in small steps I can undo.</p></div></li>
+                <li><span class="label label--teal">05</span><div><b>Testing</b><p>Confirm it works for the person who reported it — not just on my screen.</p></div></li>
+                <li><span class="label label--teal">06</span><div><b>Improvement</b><p>Document what happened and what would stop it happening again.</p></div></li>
+              </ol>
+            </div>
+            <div class="assembly" data-assembly aria-hidden="true">
+              <span class="assembly__issue">! 6 components out of place</span>
+              <div class="frag frag--accent" style="left:0;top:0;width:100%;height:13%;--dx:-40px;--dy:-60px;--r:-8deg"><span></span></div>
+              <div class="frag" style="left:0;top:16%;width:24%;height:84%;--dx:-90px;--dy:30px;--r:12deg"><span></span><span></span></div>
+              <div class="frag frag--accent" style="left:27%;top:16%;width:73%;height:30%;--dx:80px;--dy:-40px;--r:7deg"><span></span><span></span></div>
+              <div class="frag" style="left:27%;top:49%;width:35%;height:24%;--dx:-30px;--dy:90px;--r:-14deg"><span></span><span></span></div>
+              <div class="frag" style="left:65%;top:49%;width:35%;height:24%;--dx:110px;--dy:70px;--r:18deg"><span></span><span></span></div>
+              <div class="frag" style="left:27%;top:76%;width:73%;height:24%;--dx:40px;--dy:120px;--r:-6deg"><span></span><span></span></div>
+              <span class="assembly__check">✓ Verified · Documented</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 07 CONTACT ============================== -->
+    <section class="chapter finale" id="contact" aria-labelledby="contact-title" data-chapter="07" data-chapter-label="Contact">
+      <div class="wrap">
+        <p class="label chapter__num" data-reveal>Chapter 07 — Final scene</p>
+        <h2 class="finale__title" id="contact-title" data-reveal="mask" style="margin-top:24px">Have an idea <span class="soft">worth building?</span></h2>
+        <p class="finale__sub" data-reveal>Let's turn it into something useful. Alongside my current IT role, I take on remote web work: custom web applications and websites, from first idea to launch.</p>
+
+        <div class="contact-grid">
+          <div data-reveal>
+            <ul class="channels">
+              <li><a class="channel" href="mailto:timothykarani001@gmail.com"><span class="label">Email</span><span class="channel__val">timothykarani001@gmail.com</span><span aria-hidden="true">→</span></a></li>
+              <li><a class="channel" href="tel:+254711618616"><span class="label">Phone</span><span class="channel__val">+254 711 618 616</span><span aria-hidden="true">→</span></a></li>
+              <li><a class="channel" href="/assets/documents/Tim_Karani_CV.pdf" download><span class="label">CV</span><span class="channel__val">Download my CV (PDF)</span><span aria-hidden="true">↓</span></a></li>
+              <!-- Add when ready (verified URLs only):
+              <li><a class="channel" href="https://www.linkedin.com/in/YOUR-HANDLE" rel="me noopener" target="_blank"><span class="label">LinkedIn</span><span class="channel__val">linkedin.com/in/YOUR-HANDLE</span><span aria-hidden="true">↗</span></a></li>
+              <li><a class="channel" href="https://github.com/YOUR-HANDLE" rel="me noopener" target="_blank"><span class="label">GitHub</span><span class="channel__val">github.com/YOUR-HANDLE</span><span aria-hidden="true">↗</span></a></li>
+              -->
+            </ul>
+            <p style="margin-top:20px"><button class="copy-btn" type="button" data-copy="timothykarani001@gmail.com">Copy email address</button> <span class="label" data-copy-status aria-live="polite"></span></p>
+            <p class="label" style="margin-top:28px"><span class="dot"></span>Based in Nairobi, Kenya · Available for remote web projects</p>
+          </div>
+
+          <form class="form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company" data-contact-form novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hp"><label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+            <h3>Send a message</h3>
+            <p class="hint">Goes straight to my inbox. All fields are required.</p>
+            <div class="form__row">
+              <label><span class="label">Your name</span><input name="name" autocomplete="name" required><span class="err" data-err="name"></span></label>
+              <label><span class="label">Email</span><input name="email" type="email" autocomplete="email" required><span class="err" data-err="email"></span></label>
+            </div>
+            <label><span class="label">What's it about?</span>
+              <select name="topic" required>
+                <option value="">Choose one</option>
+                <option>Web application project</option>
+                <option>Website project</option>
+                <option>Improving an existing site or app</option>
+                <option>Remote role</option>
+                <option>Something else</option>
+              </select><span class="err" data-err="topic"></span></label>
+            <label><span class="label">Message</span><textarea name="message" required minlength="10"></textarea><span class="err" data-err="message"></span></label>
+            <div><button class="btn btn--primary" type="submit">Send message <span class="arrow" aria-hidden="true">→</span></button></div>
+            <p class="form__status" role="status" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="label">© <span data-year>2026</span> Tim Karani · Technology with purpose</p>
+      <span style="display:flex;gap:24px;flex-wrap:wrap"><a class="label link-line" href="/design-system.html">Design system</a><a class="label link-line" href="#top">Back to the opening ↑</a></span>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Design System · Tim Karani</title>
+  <meta name="description" content="The design system behind Tim Karani's portfolio: colour, type, components and motion rules.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B1020">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .ds { padding-block: 120px var(--section); display: grid; gap: clamp(64px, 9vw, 112px); }
+    .ds h1 { margin: 12px 0 0; font-size: var(--step-4); line-height: .95; font-weight: 800; text-transform: uppercase; font-variation-settings: "wdth" 120; letter-spacing: -.02em; }
+    .ds h2 { margin: 0 0 24px; font-size: var(--step-2); font-weight: 750; font-variation-settings: "wdth" 112; }
+    .ds > * { min-width: 0; }
+    .ds p { color: var(--text-soft); max-width: 64ch; margin: 0; }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .sw { background: var(--night); }
+    .sw i { display: block; height: 84px; }
+    .sw div { padding: 12px 14px; display: grid; gap: 4px; }
+    .sw b { font-weight: 600; font-size: .95rem; }
+    .scale { display: grid; gap: 18px; border-top: 1px solid var(--line); }
+    .scale div { display: grid; grid-template-columns: 140px 1fr; gap: 16px; align-items: baseline; padding-top: 18px; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+    .scale span:last-child { min-width: 0; overflow-wrap: anywhere; }
+    .row { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
+    .rules { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .rules li { background: var(--night); padding: 18px 20px; list-style: none; display: grid; gap: 6px; }
+    .rules { padding: 0; margin: 0; }
+    .rules li p { font-size: .92rem; }
+    @media (min-width: 760px) { .rules { grid-template-columns: 1fr 1fr; } }
+    .tbl { overflow-x: auto; }
+    .tbl table { min-width: 560px; }
+    @media (max-width: 560px) { .scale div { grid-template-columns: 1fr; gap: 6px; } }
+  </style>
+  <script>
+    (function () { var d = document.documentElement; d.classList.add('js');
+      var p = null; try { p = localStorage.getItem('tk-motion'); } catch (e) {}
+      if (p === 'off' || (p !== 'on' && matchMedia('(prefers-reduced-motion: reduce)').matches)) d.classList.add('reduce-motion');
+      setTimeout(function () { if (!window.__tkReady) d.classList.remove('js'); }, 3500); })();
+  </script>
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-nav site-nav--sub" id="top-nav">
+    <a class="brand" href="/" aria-label="Tim Karani — home"><span class="brand__mark" aria-hidden="true">TK</span><span class="brand__name">Tim Karani</span></a>
+    <div class="nav-tools"><a class="motion-toggle" style="display:inline-flex;align-items:center;text-decoration:none" href="/">← Home</a><button class="motion-toggle" type="button" aria-pressed="true" data-motion-toggle>Motion: on</button></div>
+  </header>
+
+  <main id="main" class="wrap ds">
+    <header>
+      <p class="label label--teal">Reference · v2.0</p>
+      <h1>Design system</h1>
+      <p style="margin-top:20px">The rules behind the site, so it can grow without losing its identity. Everything here is defined once in <code class="mono" style="text-transform:none">assets/css/main.css</code>.</p>
+    </header>
+
+    <section aria-labelledby="ds-idea">
+      <h2 id="ds-idea">The idea: cinematic technology</h2>
+      <ul class="rules">
+        <li><span class="label label--teal">Film</span><p>Title-sequence language: a dark frame, one key light, letterbox bars, slates, timecode, rack focus and a camera that moves through layers.</p></li>
+        <li><span class="label label--teal">Technology</span><p>Interface language: grids, monospace labels, real code, consoles and data flowing between systems.</p></li>
+        <li><span class="label label--teal">Clarity</span><p>Atmosphere never sits on top of reading text. Body copy is always high-contrast and still.</p></li>
+        <li><span class="label label--teal">Honesty</span><p>Every visual says what it is: real work, a working demo, an illustration or a concept.</p></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="ds-colour">
+      <h2 id="ds-colour">Colour</h2>
+      <div class="swatches">
+        <div class="sw"><i style="background:#05080F"></i><div><b>Void</b><span class="label">#05080F · letterbox, deepest</span></div></div>
+        <div class="sw"><i style="background:#0B1020"></i><div><b>Night</b><span class="label">#0B1020 · page</span></div></div>
+        <div class="sw"><i style="background:#0F172A"></i><div><b>Slate</b><span class="label">#0F172A · surfaces</span></div></div>
+        <div class="sw"><i style="background:#F1F5F9"></i><div><b>Text</b><span class="label">#F1F5F9 · headings</span></div></div>
+        <div class="sw"><i style="background:#CBD5E1"></i><div><b>Text soft</b><span class="label">#CBD5E1 · body</span></div></div>
+        <div class="sw"><i style="background:#94A3B8"></i><div><b>Muted</b><span class="label">#94A3B8 · labels (7:1)</span></div></div>
+        <div class="sw"><i style="background:#3B82F6"></i><div><b>Electric blue</b><span class="label">#3B82F6 · light, energy</span></div></div>
+        <div class="sw"><i style="background:#2DD4BF"></i><div><b>Teal</b><span class="label">#2DD4BF · focus, real, done</span></div></div>
+        <div class="sw"><i style="background:#7DD3FC"></i><div><b>Signal</b><span class="label">#7DD3FC · grid, data</span></div></div>
+        <div class="sw"><i style="background:#F5B54A"></i><div><b>Amber</b><span class="label">#F5B54A · concept only</span></div></div>
+      </div>
+      <p style="margin-top:20px">Amber is reserved for honesty labels: it always means "illustrative, concept or sample". Teal means real, working or complete.</p>
+    </section>
+
+    <section aria-labelledby="ds-type">
+      <h2 id="ds-type">Typography</h2>
+      <p style="margin-bottom:24px">Archivo, a variable family with a width axis: expanded (125) for titles like a film credit, normal width for reading. JetBrains Mono for every technical label, timestamp and status.</p>
+      <div class="scale">
+        <div><span class="label">Display · step 5</span><span style="font-size:var(--step-5);font-weight:800;line-height:.85;font-variation-settings:'wdth' 125;text-transform:uppercase">Karani</span></div>
+        <div><span class="label">Chapter · step 4</span><span style="font-size:var(--step-4);font-weight:800;line-height:.95;font-variation-settings:'wdth' 118;text-transform:uppercase">The archive</span></div>
+        <div><span class="label">Scene · step 3</span><span style="font-size:var(--step-3);font-weight:800;line-height:1;font-variation-settings:'wdth' 116;text-transform:uppercase">Follow one request</span></div>
+        <div><span class="label">Heading · step 2</span><span style="font-size:var(--step-2);font-weight:700;font-variation-settings:'wdth' 108">Authenticate on the server</span></div>
+        <div><span class="label">Lede · step 1</span><span style="font-size:var(--step-1);color:var(--text-soft)">Each project is labelled honestly.</span></div>
+        <div><span class="label">Body · step 0</span><span style="color:var(--text-soft)">PHP checks credentials against stored password hashes and starts a session.</span></div>
+        <div><span class="label">Label · mono</span><span class="label">Scene 02C · Databases &amp; application logic</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="ds-components">
+      <h2 id="ds-components">Components</h2>
+      <div style="display:grid;gap:28px">
+        <div class="row"><a class="btn btn--primary" href="#ds-components">Primary action <span class="arrow" aria-hidden="true">→</span></a><a class="btn" href="#ds-components">Secondary</a></div>
+        <div class="row"><span class="flag flag--real">Working demo</span><span class="flag">Illustrative recreation</span><span class="flag">Concept · sample data</span></div>
+        <div class="row"><span class="status status--completed">Completed</span><span class="status status--live">Live</span><span class="status status--progress">In progress</span><span class="status status--concept">Concept</span><span class="status status--planned">Planned</span></div>
+        <div class="row"><span class="label" style="display:inline-flex;gap:8px;align-items:center"><span class="mark mark--used"></span>Used in projects</span><span class="label" style="display:inline-flex;gap:8px;align-items:center"><span class="mark mark--practice"></span>Work experience</span><span class="label" style="display:inline-flex;gap:8px;align-items:center"><span class="mark mark--learning"></span>Learning</span></div>
+        <div class="slate" style="margin:0"><span class="slate__clap" aria-hidden="true"></span><span>Scene <b>02A</b></span><span>Web development</span><span>Take: Login → Dashboard</span></div>
+        <p class="label chapter__num">Chapter 03 — Work</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="ds-motion">
+      <h2 id="ds-motion">Motion</h2>
+      <div class="tbl"><table class="grid">
+        <thead><tr><th scope="col">Move</th><th scope="col">Film reference</th><th scope="col">Timing</th><th scope="col">Used for</th></tr></thead>
+        <tbody>
+          <tr><td>Beam draw</td><td>Opening light</td><td class="mono">0.9s · ease-cine</td><td>Scene 01 of the opening</td></tr>
+          <tr><td>Dolly</td><td>Camera push</td><td class="mono">fast → settles in ~2s</td><td>Hero corridor, extra push on scroll</td></tr>
+          <tr><td>Rack focus</td><td>Pulling focus</td><td class="mono">1.3–1.6s · ease-out</td><td>Name reveal (blur + track-in)</td></tr>
+          <tr><td>Anamorphic flare</td><td>Lens streak</td><td class="mono">1.35s, once</td><td>As the name lands</td></tr>
+          <tr><td>Mask reveal</td><td>Title card wipe</td><td class="mono">1.1s · ease-out</td><td>Chapter titles</td></tr>
+          <tr><td>Key light</td><td>Lighting cue</td><td class="mono">1.8s fade</td><td>Each chapter as it enters</td></tr>
+          <tr><td>Rise</td><td>—</td><td class="mono">0.9s · 28px</td><td>Paragraphs and panels</td></tr>
+        </tbody>
+      </table></div>
+      <ul class="rules" style="margin-top:24px">
+        <li><span class="label label--teal">Rule</span><p>No scroll hijacking. Scroll-linked effects follow the native scroll position.</p></li>
+        <li><span class="label label--teal">Rule</span><p>The opening plays once per session, is skippable, and never runs on deep links.</p></li>
+        <li><span class="label label--teal">Rule</span><p>Reduced motion (OS setting or the Motion toggle) shows every final state instantly.</p></li>
+        <li><span class="label label--teal">Rule</span><p>Canvas pauses off-screen and in hidden tabs; fewer particles on phones.</p></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-foot"><div class="wrap"><p class="label">© <span data-year>2026</span> Tim Karani</p><a class="label link-line" href="/">Back to the portfolio →</a></div></footer>
+</body>
+</html>

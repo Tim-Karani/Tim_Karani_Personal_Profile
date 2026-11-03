@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Field Operations &amp; Retail Execution System — Concept · Tim Karani</title>
+  <meta name="description" content="Concept case study: a system to connect field marketing visits, evidence, supervision and reporting. A design concept by Tim Karani — not a deployed product.">
+  <meta name="theme-color" content="#0B1020">
+  <link rel="canonical" href="https://tim-karani.netlify.app/projects/field-operations-system.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Field Operations & Retail Execution System (concept) — Tim Karani">
+  <meta property="og:description" content="From the shop floor to the report: a system concept for field marketing operations.">
+  <meta property="og:image" content="https://tim-karani.netlify.app/assets/img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>
+    (function () { var d = document.documentElement; d.classList.add('js');
+      var p = null; try { p = localStorage.getItem('tk-motion'); } catch (e) {}
+      if (p === 'off' || (p !== 'on' && matchMedia('(prefers-reduced-motion: reduce)').matches)) d.classList.add('reduce-motion');
+      if (p === 'on') d.classList.add('motion-forced');
+      setTimeout(function () { if (!window.__tkReady) d.classList.remove('js'); }, 3500); })();
+  </script>
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+
+  <header class="site-nav site-nav--sub" id="top-nav">
+    <a class="brand" href="/" aria-label="Tim Karani — home">
+      <span class="brand__mark" aria-hidden="true">TK</span><span class="brand__name">Tim Karani</span>
+    </a>
+    <div class="nav-tools">
+      <a class="motion-toggle" style="display:inline-flex;align-items:center;text-decoration:none" href="/#work">← All work</a>
+      <button class="motion-toggle" type="button" aria-pressed="true" data-motion-toggle>Motion: on</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="cover cover--field" aria-hidden="true">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <g stroke="#F5B54A" fill="none" opacity=".18"><path d="M0 160H1200M0 320H1200M0 480H1200M0 640H1200M240 0V800M480 0V800M720 0V800M960 0V800"/></g>
+          <path d="M80 640 L330 420 L560 520 L820 230 L1120 320" stroke="#F5B54A" stroke-width="2" fill="none" opacity=".8"/>
+          <g fill="#0D0F1C" stroke="#F5B54A" stroke-width="2"><circle cx="330" cy="420" r="12"/><circle cx="560" cy="520" r="12"/><circle cx="820" cy="230" r="16"/></g>
+        </svg>
+      </div>
+      <div class="wrap">
+        <a class="back label link-line" href="/#work">← Back to the archive</a>
+        <p class="label" style="margin-top:28px;color:var(--amber)">Case 02 · System design · <span class="status status--concept">Concept · in design</span></p>
+        <h1>Field Operations &amp; Retail Execution</h1>
+        <p class="lede">A system concept to connect what field teams do in shops — visits, checks and photo evidence — with what supervisors and clients need to see: clear, timely reports.</p>
+        <p style="margin-top:24px"><span class="flag">Concept — not deployed or adopted by any organisation</span></p>
+        <dl class="factsheet">
+          <div><dt class="label">Role</dt><dd>Concept, workflow &amp; system design</dd></div>
+          <div><dt class="label">Inspired by</dt><dd>Supporting field marketing teams</dd></div>
+          <div><dt class="label">Planned stack</dt><dd>PHP · MySQL · responsive web</dd></div>
+          <div><dt class="label">Status</dt><dd>Concept · in design</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="wrap case-body">
+      <section class="case-sec case-sec--split" aria-labelledby="f-problem">
+        <h2 id="f-problem" data-reveal>The problem</h2>
+        <div class="prose" data-reveal>
+          <p>Field marketing campaigns run across many retail outlets at once. Visit evidence, display checks and stock notes often travel through chat messages, phone galleries and spreadsheets.</p>
+          <p>That makes it hard for supervisors to know what actually happened in the field, and slow to turn the day's work into a report. Supporting field teams day to day showed me how much time this costs.</p>
+        </div>
+      </section>
+
+      <section class="case-sec" aria-labelledby="f-flow">
+        <h2 id="f-flow" data-reveal>How the pieces connect</h2>
+        <ol class="journey-map" data-reveal>
+          <li><span class="label" style="color:var(--amber)">01</span><b>Campaigns</b><p>Define the campaign, outlets and what must be checked.</p></li>
+          <li><span class="label" style="color:var(--amber)">02</span><b>Visit planning</b><p>Assign outlets to field reps for each day.</p></li>
+          <li><span class="label" style="color:var(--amber)">03</span><b>Check-in &amp; evidence</b><p>Reps complete a short checklist with photos on their phone.</p></li>
+          <li><span class="label" style="color:var(--amber)">04</span><b>Supervisor review</b><p>Submissions arrive in one place to approve or query.</p></li>
+          <li><span class="label" style="color:var(--amber)">05</span><b>Reporting</b><p>Approved visits roll up into campaign reports.</p></li>
+        </ol>
+      </section>
+
+      <section class="case-sec" aria-labelledby="f-proto">
+        <h2 id="f-proto" data-reveal>Try the core loop</h2>
+        <p class="chapter__lede" data-reveal style="font-size:var(--step-0)">Complete the four checks on the phone, then submit. The report lands in the supervisor view. Everything here is sample data running in your browser.</p>
+        <div class="proto" data-scene="proto">
+          <div class="phone" role="group" aria-label="Field rep app — concept">
+            <div class="phone__screen">
+              <div class="phone__top"><b>Visit · Sample Store</b><span class="label">Day 1</span></div>
+              <div class="phone__body">
+                <span class="label">Checklist</span>
+                <button class="check" type="button" aria-pressed="false"><i aria-hidden="true">✓</i><span>Checked in at the outlet</span></button>
+                <button class="check" type="button" aria-pressed="false"><i aria-hidden="true">✓</i><span>Display photo captured</span></button>
+                <button class="check" type="button" aria-pressed="false"><i aria-hidden="true">✓</i><span>Stock levels recorded</span></button>
+                <button class="check" type="button" aria-pressed="false"><i aria-hidden="true">✓</i><span>Notes for supervisor added</span></button>
+                <button class="phone__submit" type="button" disabled>Submit visit report</button>
+              </div>
+              <div class="phone__nav" aria-hidden="true"><span>Visits</span><span>Check-in</span><span>Profile</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="supervisor">
+              <div class="supervisor__head"><span class="label" style="color:var(--amber)">Supervisor view · concept</span><span class="flag">Sample data</span></div>
+              <ol class="feed" aria-live="polite" aria-label="Incoming visit reports">
+                <li><span class="label">Earlier</span><span>Visit report · Sample Store Q · 4 checks complete</span><span class="pill pill--ok">Approved</span></li>
+                <li><span class="label">Earlier</span><span>Visit report · Sample Store R · 3 of 4 checks</span><span class="pill pill--warn">Queried</span></li>
+              </ol>
+            </div>
+            <p class="label" data-proto-msg aria-live="polite" style="margin-top:14px"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="f-model">
+        <h2 id="f-model" data-reveal>Data, sketched</h2>
+        <div class="arch" data-reveal>
+          <div class="arch__layer"><span class="label" style="color:var(--amber)">Campaign</span><p>Name, dates, outlets and the checklist each visit must complete.</p></div>
+          <div class="arch__join">has many ↓</div>
+          <div class="arch__layer"><span class="label" style="color:var(--amber)">Visit</span><p>Who, where and when — plus status: planned, submitted, approved or queried.</p></div>
+          <div class="arch__join">has many ↓</div>
+          <div class="arch__layer"><span class="label" style="color:var(--amber)">Evidence</span><p>Checklist answers, photos and notes attached to the visit.</p></div>
+        </div>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="f-principles">
+        <h2 id="f-principles" data-reveal>Design principles</h2>
+        <div class="prose" data-reveal>
+          <p><strong>Built for the field, not the office.</strong> Large touch targets, very short forms, and tolerance for weak mobile connections.</p>
+          <p><strong>Least privilege.</strong> Reps see their own visits; supervisors see their team; only admins manage accounts.</p>
+          <p><strong>Evidence first.</strong> A report is only as good as the proof behind it, so evidence is attached at the moment of the visit.</p>
+          <p><strong>Private by design.</strong> No client, outlet or employee data is used in this concept — everything shown is invented.</p>
+        </div>
+      </section>
+
+      <section class="case-sec case-sec--split" aria-labelledby="f-next">
+        <h2 id="f-next" data-reveal>What happens next</h2>
+        <div class="prose" data-reveal>
+          <p>The next steps are to validate the workflow with the people who'd use it, produce wireframes for the rep and supervisor views, and then build a working prototype in PHP and MySQL. This page will be updated as the project moves forward.</p>
+        </div>
+      </section>
+
+      <nav class="next-case" aria-label="Next case study">
+        <span class="label">Previous case</span>
+        <a href="/projects/faulu-career-guidance.html">← Faulu Career Guidance System</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="label">© <span data-year>2026</span> Tim Karani · Technology with purpose</p>
+      <a class="label link-line" href="/#contact">Get in touch →</a>
+    </div>
+  </footer>
+</body>
+</html>
